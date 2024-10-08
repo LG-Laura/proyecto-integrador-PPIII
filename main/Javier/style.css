@@ -9,3 +9,11 @@ main {
 .nav-tabs .nav-link.active {
     color: black;    /* Texto Negro cuando esta activo */
 }
+.icono {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.section-padding {
+    padding-top: calc(40px + 10px); /* 10px extra para margen adicional */
+}
