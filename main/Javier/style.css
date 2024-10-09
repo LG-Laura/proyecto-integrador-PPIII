@@ -1,0 +1,19 @@
+main {
+    margin-bottom: 20px;    /* Ajusta el margen desde el home hacia sobre mí */
+}
+
+.nav-tabs .nav-link {
+    color: white;    /* Color blanco para los enlaces no activos */
+}
+
+.nav-tabs .nav-link.active {
+    color: black;    /* Texto Negro cuando esta activo */
+}
+.icono {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.section-padding {
+    padding-top: calc(40px + 10px); /* 10px extra para margen adicional */
+}

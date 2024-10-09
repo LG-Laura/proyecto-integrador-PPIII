@@ -1,11 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fer</title>
+    <title>Javier Duarte</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>PAGINA DE JAVIER</h1>
+    <header>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs bg-dark mb-3 fixed-top" id="navId" role="navigation">
+            <li class="nav-item" role="presentation">
+                <a href="#home" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a href="#sobre_mi" class="nav-link">Sobre mí</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </li>
+        </ul>
+
+        <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
+        <script>
+            var triggerEl = document.querySelector("#navId a");
+            bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
+        </script>
+
+    </header>
+    <!--    Home    -->
+    <section id="home">
+        <main>
+            <div class="container-fluid section-padding">
+                <div class="card ">
+                    <img src="src/Fondo_home.jpg" class="card-img"
+                        style="height: 300px; object-fit: cover; filter: opacity(0.5);" alt="fondo_imagen_home">
+                    <div class="card-img-overlay">
+                        <h3 class="card-title">Mi primer pagina web</h3>
+                        <div class="card-body">
+                            <p class="card-text">Esta es una página web que estoy desarrollando para la materia de
+                                prácticas
+                                profesionales III de la carrera de Análisis de Sistemas del instituto IFTS N.º 11 en
+                                colaboración
+                                con el Gobierno de la Ciudad de Buenos Aires y con el fin de aplicar todas las
+                                tecnologías
+                                vistas en
+                                el desarrollo de la tecnicatura.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </section>
+    <!--    Sobre mí    -->
+    <section id="sobre_mi">
+        <div class="container-fluid section-padding">
+            <div class="row align-items-center">
+                <div class="col-md text-center text-bg-dark">
+                    <h1>Presentación</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2>Estudiante</h2>
+                    <p>Soy un estudiante del Instituto Formación Profesional Nº 11, ubicado en Capital Federal </p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row justify-content-center g-3">
+                    <!-- Card 1 -->
+                    <div class="col-12 col-md-2">
+                        <div class="card mt-4 h-100 d-flex flex-column">
+                            <img src="src/java.png" class="card-img-top img-fluid" alt="java_programacion"
+                                style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">Java</h5>
+                                <p class="card-text">Experiencia básica en programación con el lenguaje</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-12 col-md-2">
+                        <div class="card mt-4 h-100 d-flex flex-column">
+                            <img src="src/csharp.png" class="card-img-top img-fluid" alt="csharp_programacion"
+                                style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">CSharp</h5>
+                                <p class="card-text">Experiencia básica en programación con el lenguaje</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-12 col-md-2">
+                        <div class="card mt-4 h-100 d-flex flex-column">
+                            <img src="src/php.png" class="card-img-top img-fluid" alt="PHP_programacion"
+                                style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">PHP</h5>
+                                <p class="card-text">Experiencia básica en programación con el lenguaje</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-12 col-md-2">
+                        <div class="card mt-4 h-100 d-flex flex-column">
+                            <img src="src/html.png" class="card-img-top img-fluid" alt="html_programacion"
+                                style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">HTML y CSS</h5>
+                                <p class="card-text">Experiencia básica en programación con el lenguaje</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-12 col-md-2">
+                        <div class="card mt-4 h-100 d-flex flex-column">
+                            <img src="src/Bootstrap.png" class="card-img-top img-fluid" alt="bootstrap_programacion"
+                                style="height: 200px; object-fit: contain;">
+                            <div class="card-body">
+                                <h5 class="card-title">Bootstrap</h5>
+                                <p class="card-text">Experiencia básica en programación con el lenguaje</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </div>
+    <!--    Contacto    -->
+    <section id="contacto">
+        <div class="container-fluid section-padding">
+            <div class="row justify-content-center my-3">
+                <div class="col-8">
+                    <h2 class="text-center text-bg-primary">Contáctanos</h2>
+                    <form action="" method="POST">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="form-control" required
+                                placeholder="Ingrese su nombre">
+                            <small id="helpId" class="text-muted">Campo obligatorio</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="apellido">Apellido</label>
+                            <input type="text" id="apellido" name="apellido" class="form-control" required
+                                placeholder="Ingrese su apellido">
+                            <small id="helpId" class="text-muted">Campo obligatorio</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required
+                                placeholder="usuario@gmail.com">
+                            <small id="helpId" class="text-muted">Campo obligatorio</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comentario">Comentario</label>
+                            <textarea class="form-control" id="comentario" name="comentario" rows="6"
+                                required></textarea>
+                            <small id="helpId" class="text-muted">Campo obligatorio</small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container-fluid bg-dark">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <div class="card-body text-secondary">
+                        <h5 class="card-title">Javier Duarte</h5>
+                        <p class="card-text">Desarrollador junior</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-center ">
+                    <div class="card-body text-secondary">
+                        <div class="card-title">Encontrame en las redes</div>
+                        <a href="https://www.linkedin.com/in/javier-duarte-acosta/" class="text-secondary"
+                            target="_blank">
+                            <img src="src/LinkedIn.png" class="icono" alt="LinkedIn">
+                            LinkedIn
+                        </a>
+                        <a href="https://github.com/JabyDuarte" class="text-secondary" target="_blank">
+                            <img src="src/github.png" class="icono" alt="Github">
+                            Github
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <div class="card-body text-secondary    ">
+                        <h5 class="card-title">Prácticas Profesionales III</h5>
+                        <p class="card-text">2024 &reg; Todos los derechos reservados</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

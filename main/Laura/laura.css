@@ -1,0 +1,189 @@
+/* Reset general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    overflow-x: hidden;
+    position: relative;
+}
+
+header {
+    background: rgba(0, 0, 0, 0.85);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1em;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.7em;
+    font-family: 'Orbitron', sans-serif;
+    color: #f78166;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1em;
+}
+
+.nav-links a {
+    color: #58a6ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f78166;
+}
+
+/* Ajustes para la sección hero */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #58a6ff, #f78166);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    padding: 2em;
+}
+
+/* Ajustes para el título */
+.hero-title {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+    color: #ffffff;
+    animation: flicker 1.5s infinite alternate;
+    max-width: 70%;
+    z-index: 2;
+}
+
+/* Botón */
+.cta-button {
+    background-color: #f78166;
+    color: #0d1117;
+    border: none;
+    padding: 0.8em 2em;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 2em;
+    z-index: 2;
+}
+
+.cta-button:hover {
+    background-color: #58a6ff;
+    color: #ffffff;
+    animation: glow 1.5s infinite alternate;
+}
+
+/* Ajustes para las redes sociales */
+.social-icons {
+    margin-top: 0.5em;
+    display: flex;
+    gap: 1.5em;
+    z-index: 2;
+}
+
+.social-icons img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Ajustes para la imagen */
+.image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    animation: float 5s ease-in-out infinite;
+}
+
+.image-container img {
+    width: 600px; 
+    height: 600px;
+    border-radius: 50%;
+    opacity: 0.5; 
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
+}
+
+/* Animaciones */
+@keyframes float {
+    0% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateY(-20px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #f78166, 0 0 10px #f78166, 0 0 20px #f78166, 0 0 40px #f78166;
+    }
+    to {
+        box-shadow: 0 0 20px #58a6ff, 0 0 30px #58a6ff, 0 0 40px #58a6ff, 0 0 60px #58a6ff;
+    }
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Media queries para mejor responsividad */
+@media (max-width: 768px) {
+    .hero {
+        padding: 1em;
+    }
+    
+    .hero-title {
+        font-size: 2.5em;
+        max-width: 100%;
+    }
+
+    .social-icons {
+        margin-top: 1em;
+    }
+
+    .cta-button {
+        margin-top: 1.5em;
+    }
+
+    .image-container img {
+        width: 300px;
+        height: 300px;
+    }
+}
