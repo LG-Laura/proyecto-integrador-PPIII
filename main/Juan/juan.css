@@ -1,0 +1,274 @@
+:root { 
+    --background-color: #ffffff;
+ }
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0;
+    background-color: #fdf7f7;
+    width: 100%;
+    height: 100vh;
+}
+
+h1, h2, h3, a {
+    font-family: 'Poppins', sans-serif;
+}
+.navbar-nav {
+    flex-direction: row;
+}
+.nav-item {
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffc107 !important;
+} 
+.nav-link {
+    font-family: 'Poppins', sans-serif;
+    color: white !important; 
+    transition: color 0.3s !important;
+    cursor: pointer !important;
+}
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+.navbar-brand:hover{
+    color: #ffc107 !important;
+    font-family: 'Poppins', sans-serif;
+}
+.hero {
+    background-image: url('assets/hero-bg.jpg');
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 1; 
+}
+
+/* Pseudo-elemento para el overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1; /* Envía el overlay detrás del contenido */
+}
+
+.hero h2 {
+    font-size: 3.5rem;
+    color: #fff;
+    z-index: 2; /* Asegura que el texto esté por encima del overlay */
+    font-weight: bolder;
+}
+
+.hero p {
+    font-size: 2rem;
+    z-index: 2; /* Asegura que el texto esté por encima del overlay */   
+    color: #fff;
+}
+span{
+    color: #ffc107;
+}
+ul li i {
+    color: #ffc107;
+    margin-right: 0.5rem;
+    line-height: 1.2;
+    font-size: 1.25rem;
+}
+
+ul li span {
+    color: #000;
+}
+
+p {
+    color: #000;
+}
+
+/* CARROUSEL */
+#technologies{
+    background-color: #fff;
+}
+#technologies h2{
+    color: #000;
+    text-align: center;
+    margin: 20px auto;
+}
+.tech-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%; 
+    height: 300px;
+    overflow: hidden;
+}
+
+.tech-item {
+    margin: 20px;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: fadeOut 2s forwards;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    color: #fff;
+    font-weight: bolder;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Estilos del formulario */
+/*--------------------------------------------------------------
+# Contact Section
+--------------------------------------------------------------*/
+.contact .info-item+.info-item {
+    margin-top: 40px;
+  }
+  
+  .contact .info-item i {
+    color: #050505;
+    background: #ffc107;
+    font-size: 20px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+  }
+  
+  .contact .info-item h3 {
+    padding: 0;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .contact .info-item p {
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  
+  .contact {
+    height: 100%;
+  }
+  
+  .contact input[type=text],
+  .contact input[type=email],
+  .contact textarea {
+    font-size: 14px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-radius: 0;
+    color: #444444;
+    background-color: color-mix(in srgb, #ffffff, transparent 50%);
+    border-color: color-mix(in srgb, #444444, transparent 80%);
+  }
+  
+  .contact input[type=text]:focus,
+  .contact input[type=email]:focus,
+  .contact textarea:focus {
+    border-color: #ffc451;
+  }
+  
+  .contact input[type=text]::placeholder,
+  .contact input[type=email]::placeholder,
+  .contact textarea::placeholder {
+    color: color-mix(in srgb, #312d2d, transparent 70%);
+  }
+  
+  .contact button[type=submit] {
+    color: #0b0b0b;
+    background: #ffc107;
+    border: 0;
+    padding: 10px 30px;
+    transition: 0.4s;
+    border-radius: 4px;
+  }
+  
+  .contact button[type=submit]:hover {
+    background: color-mix(in srgb, #ffc100, transparent 20%);
+  }
+/*sobre mi*/
+#about{
+    margin-top: 30px;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.loading {
+    display: none; /* Oculto por defecto */
+}
+
+.overlay {
+    position: fixed; /* Fijo para cubrir toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Fondo negro con opacidad */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Asegura que esté por encima de otros elementos */
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.25em;
+    color: #ffc107;
+}
+
+.loading-text {
+    margin-top: 10px; /* Espaciado entre el spinner y el texto */
+    color: white; /* Texto en blanco */
+    font-size: 1.25rem; /* Tamaño del texto */
+    font-weight: bolder;
+}
