@@ -158,7 +158,27 @@ p {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-100% + 100vw)); } /* Mueve el ancho total de los ítems */
 }
+@media (max-width: 412px) {
+    .tech-carousel {
+        width: 100%; 
+        animation: none;
+    }
 
+    .tech-item {
+        min-width: 90%; 
+        height: auto;
+        margin: auto;
+    }
+
+    .tech-item img {
+        height: 180px;
+    }
+
+    .tech-item p {
+        font-size: 14px; 
+        margin-top: 20px; 
+    }
+}
 
 /* Estilos del formulario */
 /*--------------------------------------------------------------
