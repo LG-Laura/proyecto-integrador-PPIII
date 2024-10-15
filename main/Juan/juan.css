@@ -100,49 +100,65 @@ p {
 }
 
 /* CARROUSEL */
-#technologies{
+#technologies {
     background-color: #fff;
+    padding: 20px 0;
 }
-#technologies h2{
+
+#technologies h2 {
     color: #000;
     text-align: center;
     margin: 20px auto;
 }
 .tech-carousel {
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: relative;
-    width: 100%; 
-    height: 300px;
     overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
 .tech-item {
-    margin: 20px;
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    animation: fadeOut 2s forwards;
-    display: flex; 
+    min-width: 300px;
+    height: 290px;
+    margin: 0 15px;
+    flex-shrink: 0;
+    display: flex;
     flex-direction: column;
-    align-items: center; 
-    justify-content: center;
-    color: #fff;
-    font-weight: bolder;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    background-color: #fff;
+    border-radius: 10px;
 }
 
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
+.tech-carousel {
+    display: flex;
+    animation: infinite-scroll 40s linear infinite;
+    /* Con este width calculamos el tamaño total del contenido */
+    width: calc((300px + 30px) * 10); /* 300px de ancho + 30px de margin (15px a cada lado) */
+    height: 40vh;
+}
+.tech-item img {
+    max-width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.tech-item p {
+    margin-top: 30px; /* Espacio entre la imagen y el texto */
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    text-align: center; /* Asegura que el texto esté centrado */
+}
+@keyframes infinite-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100% + 100vw)); } /* Mueve el ancho total de los ítems */
 }
 
-@keyframes fadeOut {
-    0% { opacity: 1; }
-    100% { opacity: 0; }
-}
 
 /* Estilos del formulario */
 /*--------------------------------------------------------------
