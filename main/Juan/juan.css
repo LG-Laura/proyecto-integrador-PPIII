@@ -103,6 +103,7 @@ p {
 #technologies {
     background-color: #fff;
     padding: 20px 0;
+    overflow: hidden;
 }
 
 #technologies h2 {
@@ -116,6 +117,8 @@ p {
     overflow: hidden;
     width: 100%;
     position: relative;
+    animation: infinite-scroll 40s linear infinite;
+    padding-left: 10px;
 }
 
 .tech-item {
@@ -308,3 +311,87 @@ footer a {
     font-size: 1.25rem; /* Tamaño del texto */
     font-weight: bolder;
 }
+/* trabajos */
+/* Contenedor principal */
+.trabajo-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+}
+
+/* Tarjetas pares con fondo gris */
+.trabajo-card:nth-child(even) {
+    background-color: #f0f0f0;
+}
+
+/* Estilo para la imagen */
+.trabajo-card .imagen {
+    width: 30%; /* Ajustar ancho de la imagen */
+    height: 200px; /* Altura fija */
+}
+
+.trabajo-card .imagen img {
+    width: 100%; /* Imagen ocupa el ancho completo del contenedor */
+    height: 100%; /* Imagen ocupa la altura fija definida */
+    object-fit: cover; /* Mantiene las proporciones de la imagen y recorta si es necesario */
+    border-radius: 10px;
+}
+
+/* Estilo para el contenido */
+.trabajo-card .contenido {
+    width: 65%;
+    padding: 0 20px;
+}
+
+/* Para invertir el orden de las imágenes y el contenido en las tarjetas pares */
+.trabajo-card.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Estilos para el texto */
+.trabajo-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.trabajo-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Efecto hover: Se levanta y se aumenta la sombra */
+.trabajo-card:hover {
+    transform: translateY(-10px); /* Se levanta 10px */
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más grande */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .trabajo-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .trabajo-card.reverse {
+        flex-direction: column;
+    }
+
+    .trabajo-card .imagen {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .trabajo-card .contenido {
+        width: 100%;
+        padding: 0;
+    }
+}
+
