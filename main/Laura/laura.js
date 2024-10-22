@@ -13,3 +13,24 @@ particlesJS("particle-canvas", {
         }
     }
 });
+
+// Inicializa EmailJS
+(function(){
+    emailjs.init("servicio_es7xuet"); // Reemplaza con tu User ID
+  })();
+  
+  // Agrega el evento de envío al formulario
+  document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+  
+    // Enviar el formulario
+    emailjs.sendForm("servicio_es7xuet", "__ejs-test-mail-service__", this)
+      .then(function() {
+        alert("Mensaje enviado exitosamente!");
+        // Limpiar el formulario
+        document.getElementById("contactForm").reset();
+      }, function(error) {
+        alert("Error al enviar el mensaje: " + JSON.stringify(error));
+      });
+  });
+  
