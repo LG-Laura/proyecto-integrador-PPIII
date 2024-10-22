@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./laura.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <title>Laura López</title>
 </head>
 <body>
@@ -91,15 +92,18 @@
     <section id="contact" class="contact-section">
         <h2 class="section-title">Contacto</h2>
         <form class="contact-form" id="contactForm">
-            <input type="text" id="name" placeholder="Tu nombre" required>
-            <input type="email" id="email" placeholder="Tu correo electrónico" required>
-            <textarea id="message" placeholder="Tu mensaje" required></textarea>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+            <textarea id="message" name="message" placeholder="Tu mensaje" required></textarea>
             <button type="submit" class="cta-button animate__pulse">Enviar Mensaje</button>
-        </form>
+        </form>        
     </section>
 
     <footer class="footer">
         <p>© 2024 Laura López. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="laura.js"></script>
+
 </body>
 </html>
