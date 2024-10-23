@@ -24,7 +24,7 @@ particlesJS("particle-canvas", {
     event.preventDefault();
   
     // Enviar el formulario
-    emailjs.sendForm("servicio_es7xuet", "plantilla_kw8az8h", this)
+    emailjs.sendForm("servicio_es7xuet", "template_kw8az8h", this)
       .then(function() {
         alert("Mensaje enviado exitosamente!");
         // Limpiar el formulario
