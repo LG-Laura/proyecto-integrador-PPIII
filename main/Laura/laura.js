@@ -16,7 +16,7 @@ particlesJS("particle-canvas", {
 
 // Inicializa EmailJS
 (function(){
-    emailjs.init("servicio_es7xuet"); // Reemplaza con tu User ID
+    emailjs.init("UnwxxufSfCOzt9nYZ"); // Reemplaza con tu User ID
   })();
   
   // Agrega el evento de envío al formulario
