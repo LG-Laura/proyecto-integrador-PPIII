@@ -1,6 +1,8 @@
 // Elementos del DOM
 const taskForm = document.getElementById('task-form');
-const taskList = document.getElementById('task-list');
+const queueColumn = document.getElementById('queue');
+const inProgressColumn = document.getElementById('in-progress');
+const doneColumn = document.getElementById('done');
 const exportBtn = document.getElementById('export-btn');
 
 // Cargar tareas desde LocalStorage al cargar la página
@@ -13,25 +15,25 @@ taskForm.addEventListener('submit', function (e) {
   const taskText = taskInput.value.trim();
 
   if (taskText) {
-    addTaskToList(taskText);
-    saveTaskToStorage(taskText);
+    addTaskToColumn(taskText, 'queue');
+    saveTaskToStorage(taskText, 'queue');
     taskInput.value = '';
   }
 });
 
-// Función para agregar la tarea como una card
-function addTaskToList(taskText, isCompleted = false) {
+// Función para crear y agregar una tarjeta en la columna correspondiente
+function addTaskToColumn(taskText, status) {
   const div = document.createElement('div');
   div.classList.add('card');
-  if (isCompleted) {
-    div.classList.add('completed');
-  }
+  div.draggable = true; // Habilitar drag-and-drop
+  div.addEventListener('dragstart', dragStart);
+  div.addEventListener('dragend', dragEnd);
 
   div.innerHTML = `
     <div class="card-body">
       <h5 class="task-text">${taskText}</h5>
       <div>
-        <button class="btn btn-success btn-sm me-2 status-btn">${isCompleted ? 'Pendiente' : 'Listo'}</button>
+        <button class="btn btn-success btn-sm me-2 status-btn">Listo</button>
         <button class="btn btn-warning btn-sm me-2 edit-btn">Editar</button>
         <button class="btn btn-danger btn-sm me-2">Eliminar</button>
         <a href="#" class="btn btn-info btn-sm whatsapp-btn">WhatsApp</a>
@@ -39,13 +41,11 @@ function addTaskToList(taskText, isCompleted = false) {
     </div>
   `;
 
-  // Funcionalidad del botón "Listo/Pendiente" para marcar la tarea como completada o pendiente
+  // Funcionalidad del botón "Listo"
   const statusBtn = div.querySelector('.status-btn');
   statusBtn.addEventListener('click', function () {
     div.classList.toggle('completed');
-    const isNowCompleted = div.classList.contains('completed');
-    statusBtn.textContent = isNowCompleted ? 'Pendiente' : 'Listo';
-    updateTaskInStorage(taskText, isNowCompleted);
+    updateTaskInStorage(taskText, div.classList.contains('completed'));
   });
 
   // Funcionalidad de eliminar tarea
@@ -66,7 +66,65 @@ function addTaskToList(taskText, isCompleted = false) {
     promptForPhoneNumberAndSendWhatsApp(taskText);
   });
 
-  taskList.appendChild(div);
+  // Agregar la tarea a la columna correspondiente
+  if (status === 'queue') {
+    queueColumn.appendChild(div);
+  } else if (status === 'in-progress') {
+    inProgressColumn.appendChild(div);
+  } else if (status === 'done') {
+    doneColumn.appendChild(div);
+  }
+}
+
+// Función para permitir arrastrar la tarjeta (drag-and-drop)
+function dragStart(e) {
+  e.dataTransfer.setData('text/plain', this.querySelector('.task-text').textContent);
+  this.classList.add('dragging');
+}
+
+function dragEnd() {
+  this.classList.remove('dragging');
+}
+
+// Permitir que las columnas acepten drop
+document.querySelectorAll('.task-column').forEach(column => {
+  column.addEventListener('dragover', function (e) {
+    e.preventDefault(); // Necesario para permitir el drop
+    this.classList.add('dragover');
+  });
+
+  column.addEventListener('dragleave', function () {
+    this.classList.remove('dragover');
+  });
+
+  column.addEventListener('drop', function (e) {
+    e.preventDefault();
+    const taskText = e.dataTransfer.getData('text/plain');
+    const newStatus = this.id;
+    moveTaskToNewColumn(taskText, newStatus);
+    this.classList.remove('dragover');
+  });
+});
+
+// Función para mover tarea entre columnas
+function moveTaskToNewColumn(taskText, newStatus) {
+  // Remover la tarea de la columna actual
+  const allCards = document.querySelectorAll('.card');
+  allCards.forEach(card => {
+    if (card.querySelector('.task-text').textContent === taskText) {
+      card.remove();
+    }
+  });
+
+  // Agregar la tarea a la nueva columna
+  addTaskToColumn(taskText, newStatus);
+
+  // Actualizar el estado de la tarea en LocalStorage
+  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+  const updatedTasks = tasks.map(task =>
+    task.text === taskText ? { text: task.text, status: newStatus } : task
+  );
+  localStorage.setItem('tasks', JSON.stringify(updatedTasks));
 }
 
 // Función para pedir el número de teléfono y enviar la tarea por WhatsApp
@@ -83,13 +141,13 @@ function promptForPhoneNumberAndSendWhatsApp(taskText) {
 // Función para validar el número de teléfono (básica)
 function validatePhoneNumber(phoneNumber) {
   const phoneRegex = /^[0-9]{11,15}$/; 
-  return phoneRegex.test("549"+phoneNumber);
+  return phoneRegex.test("549" + phoneNumber); // Agregar el prefijo "549" para Argentina
 }
 
 // Función para enviar la tarea a WhatsApp con el número ingresado por el usuario
 function sendTaskToWhatsApp(taskText, phoneNumber) {
   const message = encodeURIComponent(`Tarea: ${taskText}`);
-  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=549${phoneNumber}&text=${message}`;
   window.open(whatsappUrl, '_blank');
 }
 
@@ -125,32 +183,23 @@ function editTask(div, oldTaskText) {
       editBtn.classList.add('btn-warning');
 
       // Actualizar la tarea en LocalStorage
-      updateTaskTextInStorage(oldTaskText, newTaskText, div.classList.contains('completed'));
+      updateTaskTextInStorage(oldTaskText, newTaskText);
     }
   });
 }
 
 // Guardar tarea en LocalStorage
-function saveTaskToStorage(taskText) {
+function saveTaskToStorage(taskText, status) {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  tasks.push({ text: taskText, completed: false });
+  tasks.push({ text: taskText, status });
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-// Actualizar el estado de la tarea en LocalStorage
-function updateTaskInStorage(taskText, isCompleted) {
-  const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  const updatedTasks = tasks.map(task => 
-    task.text === taskText ? { text: task.text, completed: isCompleted } : task
-  );
-  localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-}
-
 // Actualizar el texto de la tarea en LocalStorage
-function updateTaskTextInStorage(oldTaskText, newTaskText, isCompleted) {
+function updateTaskTextInStorage(oldTaskText, newTaskText) {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   const updatedTasks = tasks.map(task => 
-    task.text === oldTaskText ? { text: newTaskText, completed: isCompleted } : task
+    task.text === oldTaskText ? { text: newTaskText, status: task.status } : task
   );
   localStorage.setItem('tasks', JSON.stringify(updatedTasks));
 }
@@ -165,7 +214,7 @@ function removeTaskFromStorage(taskText) {
 // Cargar tareas guardadas en LocalStorage
 function loadTasksFromStorage() {
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  tasks.forEach(task => addTaskToList(task.text, task.completed));
+  tasks.forEach(task => addTaskToColumn(task.text, task.status));
 }
 
 // Exportar la lista de tareas a un archivo Excel

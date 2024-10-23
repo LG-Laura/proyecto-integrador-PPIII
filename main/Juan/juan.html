@@ -134,19 +134,39 @@
 
 <div id="servicios" class="container mt-5">
   <h1 class="text-center" style="font-weight: bolder; color: #ffc107;font-size: 3rem;">To-Do List</h1>  
+
   <!-- Formulario para añadir tareas -->
   <form id="task-form" class="d-flex mb-3">
     <input type="text" id="new-task" class="form-control me-2" placeholder="Agregar nueva tarea" required>
     <button type="submit" class="btn btn-primary">Añadir</button>
   </form>
 
-  <!-- Lista de tareas -->
-  <div id="task-list" class="d-flex flex-wrap gap-2"></div>
+  <!-- Contenedor de columnas -->
+  <div class="row">
+    <!-- Columna "En cola" -->
+    <div class="col-md-4">
+      <h4 class="text-center">En cola</h4>
+      <div id="queue" class="task-column d-flex flex-column gap-2" ondragover="event.preventDefault()" ondrop="handleDrop(event, 'queue')"></div>
+    </div>
 
+    <!-- Columna "En proceso" -->
+    <div class="col-md-4">
+      <h4 class="text-center">En proceso</h4>
+      <div id="in-progress" class="task-column d-flex flex-column gap-2" ondragover="event.preventDefault()" ondrop="handleDrop(event, 'in-progress')"></div>
+    </div>
+
+    <!-- Columna "Terminada" -->
+    <div class="col-md-4">
+      <h4 class="text-center">Terminada</h4>
+      <div id="done" class="task-column d-flex flex-column gap-2" ondragover="event.preventDefault()" ondrop="handleDrop(event, 'done')"></div>
+    </div>
+  </div>
 
   <!-- Botón para exportar a Excel -->
-  <button id="export-btn" class="btn btn-success w-100">Exportar a Excel</button>
+  <button id="export-btn" class="btn btn-success w-100 mt-4">Exportar a Excel</button>
 </div>
+
+
 
 <br>
 <br>
