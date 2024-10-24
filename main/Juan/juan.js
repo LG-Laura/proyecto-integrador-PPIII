@@ -119,6 +119,13 @@ function moveTaskToNewColumn(taskText, newStatus) {
   // Agregar la tarea a la nueva columna
   addTaskToColumn(taskText, newStatus);
 
+   // Cambiar el color si la tarea se mueve a la columna 'done'
+  if (newStatus === 'done') {
+    taskDiv.classList.add('completed'); // Clase que cambia el color a verde
+  } else {
+    taskDiv.classList.remove('completed'); // Quitar el color verde si no está en 'done'
+  }
+
   // Actualizar el estado de la tarea en LocalStorage
   const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
   const updatedTasks = tasks.map(task =>
@@ -127,9 +134,11 @@ function moveTaskToNewColumn(taskText, newStatus) {
   localStorage.setItem('tasks', JSON.stringify(updatedTasks));
 }
 
+
+
 // Función para pedir el número de teléfono y enviar la tarea por WhatsApp
 function promptForPhoneNumberAndSendWhatsApp(taskText) {
-  const phoneNumber = prompt("Ingresa tu número de teléfono con código de país (ejemplo: 1123456789):");
+  const phoneNumber = prompt("Ingresa tu número de teléfono (ejemplo: 1123456789):");
   
   if (phoneNumber && validatePhoneNumber(phoneNumber)) {
     sendTaskToWhatsApp(taskText, phoneNumber);
@@ -141,7 +150,7 @@ function promptForPhoneNumberAndSendWhatsApp(taskText) {
 // Función para validar el número de teléfono (básica)
 function validatePhoneNumber(phoneNumber) {
   const phoneRegex = /^[0-9]{11,15}$/; 
-  return phoneRegex.test("549" + phoneNumber); // Agregar el prefijo "549" para Argentina
+  return phoneRegex.test("549" + phoneNumber);
 }
 
 // Función para enviar la tarea a WhatsApp con el número ingresado por el usuario

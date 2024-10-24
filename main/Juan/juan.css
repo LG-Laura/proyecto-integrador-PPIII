@@ -1,4 +1,4 @@
-:root { 
+:root {
     --background-color: #ffffff;
  }
 html {
@@ -23,14 +23,14 @@ h1, h2, h3, a {
 }
 .nav-item {
     margin-left: 20px;
-    margin-right: 20px; 
+    margin-right: 20px;
 }
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #ffc107 !important;
-} 
+}
 .nav-link {
     font-family: 'Poppins', sans-serif;
-    color: white !important; 
+    color: white !important;
     transition: color 0.3s !important;
     cursor: pointer !important;
 }
@@ -44,7 +44,7 @@ h1, h2, h3, a {
 .hero {
     background-image: url('assets/hero-bg.jpg');
     background-size: cover;
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
@@ -54,7 +54,7 @@ h1, h2, h3, a {
     color: #fff;
     text-align: center;
     position: relative;
-    z-index: 1; 
+    z-index: 1;
 }
 
 /* Pseudo-elemento para el overlay */
@@ -78,7 +78,7 @@ h1, h2, h3, a {
 
 .hero p {
     font-size: 2rem;
-    z-index: 2; /* Asegura que el texto esté por encima del overlay */   
+    z-index: 2; /* Asegura que el texto esté por encima del overlay */
     color: #fff;
 }
 span{
@@ -163,12 +163,12 @@ p {
 }
 @media (max-width: 412px) {
     .tech-carousel {
-        width: 100%; 
+        width: 100%;
         animation: none;
     }
 
     .tech-item {
-        min-width: 90%; 
+        min-width: 90%;
         height: auto;
         margin: auto;
     }
@@ -178,8 +178,8 @@ p {
     }
 
     .tech-item p {
-        font-size: 14px; 
-        margin-top: 20px; 
+        font-size: 14px;
+        margin-top: 20px;
     }
 }
 
@@ -190,7 +190,7 @@ p {
 .contact .info-item+.info-item {
     margin-top: 40px;
   }
-  
+
   .contact .info-item i {
     color: #050505;
     background: #ffc107;
@@ -204,24 +204,24 @@ p {
     transition: all 0.3s ease-in-out;
     margin-right: 15px;
   }
-  
+
   .contact .info-item h3 {
     padding: 0;
     font-size: 18px;
     font-weight: 700;
     margin-bottom: 5px;
   }
-  
+
   .contact .info-item p {
     padding: 0;
     margin-bottom: 0;
     font-size: 14px;
   }
-  
+
   .contact {
     height: 100%;
   }
-  
+
   .contact input[type=text],
   .contact input[type=email],
   .contact textarea {
@@ -233,19 +233,19 @@ p {
     background-color: color-mix(in srgb, #ffffff, transparent 50%);
     border-color: color-mix(in srgb, #444444, transparent 80%);
   }
-  
+
   .contact input[type=text]:focus,
   .contact input[type=email]:focus,
   .contact textarea:focus {
     border-color: #ffc451;
   }
-  
+
   .contact input[type=text]::placeholder,
   .contact input[type=email]::placeholder,
   .contact textarea::placeholder {
     color: color-mix(in srgb, #312d2d, transparent 70%);
   }
-  
+
   .contact button[type=submit] {
     color: #0b0b0b;
     background: #ffc107;
@@ -254,7 +254,7 @@ p {
     transition: 0.4s;
     border-radius: 4px;
   }
-  
+
   .contact button[type=submit]:hover {
     background: color-mix(in srgb, #ffc100, transparent 20%);
   }
@@ -396,47 +396,54 @@ footer a {
 }
 
 /* Opcional: Añade un sombreado a las tarjetas y mejora el estilo */
-#task-list {
+ /* #task-list {
     display: flex;
-    flex-wrap: wrap; /* Permitir que las tarjetas hagan wrap en varias líneas si no caben */
-    gap: 1rem; /* Espacio entre tarjetas */
+    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: flex-start;
   }
-  
+
   .card {
-    width: 300px; /* Ancho fijo para que se alineen en columnas */
+    width: 300px;
     margin: 1rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  } */
+  .card {
+    width: 100%; /* Asegúrate de que el ancho se adapte a la columna */
+    margin: 1rem 0; /* Espaciado vertical entre tarjetas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px; /* Esquinas redondeadas */
+    background-color: white; /* Fondo blanco para las tarjetas */
   }
-  
+
   .whatsapp-input {
-    display: none; /* Ocultamos el input inicialmente */
+    display: none;
     margin-top: 1rem;
   }
-  
+
   .card-body {
     position: relative;
   }
   .card.completed {
-    background-color: #d3ffd3; /* Fondo verde claro para tareas completadas */
-    text-decoration: line-through; /* Tachado para tareas completadas */
+    background-color: #d3ffd3;
+    text-decoration: line-through;
   }
-  
+
   .card .task-text {
-    margin-bottom: 0.5rem; /* Espaciado inferior para el texto de la tarea */
+    margin-bottom: 0.5rem;
   }
   .card-body button {
-    margin-right: 0.5rem; /* Espacio a la derecha de los botones */
-    margin-bottom: 0.5rem; /* Espacio debajo de los botones */
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .card-body .whatsapp-input {
-    display: none; /* Ocultamos el input inicialmente */
+    display: none;
     margin-top: 1rem;
 }
 
-  
-  
+
+
   input[type="tel"] {
     width: 100%;
     padding: 0.5rem;
@@ -444,10 +451,23 @@ footer a {
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
   }
-  
+
   input[type="tel"]:focus {
     outline: none;
     border-color: #80bdff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+   .task-column {
+    width: 300px; /* Ajusta el ancho según lo necesites */
+    min-height: 200px; /* Asegúrate de que haya suficiente espacio para soltar tareas */
+    border: 1px dashed #ccc; /* Estilo visual para identificar el área de drop */
+    padding: 1rem; /* Espaciado interno */
+    background-color: #f9f9f9; /* Color de fondo para mayor claridad */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color al arrastrar */
+  }
+
+  .task-column.dragover {
+    background-color: #e0e0e0; /* Color al arrastrar sobre la columna */
   }
   
