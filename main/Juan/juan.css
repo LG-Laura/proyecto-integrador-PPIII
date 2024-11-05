@@ -332,14 +332,14 @@ footer a {
 
 /* Estilo para la imagen */
 .trabajo-card .imagen {
-    width: 30%; /* Ajustar ancho de la imagen */
-    height: 200px; /* Altura fija */
+    width: 30%;
+    height: 200px; 
 }
 
 .trabajo-card .imagen img {
-    width: 100%; /* Imagen ocupa el ancho completo del contenedor */
-    height: 100%; /* Imagen ocupa la altura fija definida */
-    object-fit: cover; /* Mantiene las proporciones de la imagen y recorta si es necesario */
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
     border-radius: 10px;
 }
 
