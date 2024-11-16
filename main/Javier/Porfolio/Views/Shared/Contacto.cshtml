@@ -1,0 +1,38 @@
+﻿<div class="container-fluid section-padding  py-4">
+    <div class="row justify-content-center my-3">
+        <div class="col-8">
+            <h1 class="text-center text-bg-primary">Contáctame</h1>
+            <form asp-action="Contacto" asp-controller="Home" method="POST">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" class="form-control" required
+                           placeholder="Ingrese su nombre">
+                    <small id="helpId" class="text-muted">Campo obligatorio</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" id="apellido" name="apellido" class="form-control" required
+                           placeholder="Ingrese su apellido">
+                    <small id="helpId" class="text-muted">Campo obligatorio</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" required
+                           placeholder="usuario@gmail.com">
+                    <small id="helpId" class="text-muted">Campo obligatorio</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentario">Comentario</label>
+                    <textarea class="form-control" id="comentario" name="comentario" rows="6"
+                              required></textarea>
+                    <small id="helpId" class="text-muted">Campo obligatorio</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
