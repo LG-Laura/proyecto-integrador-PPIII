@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Porfolio</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Porfolio.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Style.css" asp-append-version="true" /> <!-- estilos personalizados-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- iconos de bootstrap-->
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-black border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Javier</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-md-end justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Presentacion">Presentacion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Habilidades">Habilidades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="SeccionProyectos">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid ">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="bg-dark border-top text-secondary py-4">
+        <div class="container-fluid">
+            <div class="row justify-content-between">
+                <!-- Sección 1: Información del Proyecto -->
+                <div class="col-12 col-md-4 text-start">
+                    <h5>Javier Duarte</h5>
+                    <p>Proyecto Integrador realizado en el IFTS Nº11.</p>
+                    <p>Analistas y desarrolladores al servicio de la comunidad.</p>
+
+                </div>
+
+                <!-- Sección 2: Redes Sociales (centrado en pantallas grandes) -->
+                <div class="col-12 col-md-4 text-start text-md-center mt-3 mt-md-0">
+                    <h5>Encontrame en las redes</h5>
+                    <i class="bi bi-linkedin me-2"></i>
+                    <a href="https://www.linkedin.com/in/javier-duarte-acosta/" class="text-secondary d-flex align-items-center justify-content-start justify-content-md-center" target="_blank">
+                        LinkedIn
+                    </a>
+                    <i class="bi bi-github me-2"></i>
+                    <a href="https://github.com/JabyDuarte" class="text-secondary d-flex align-items-center justify-content-start justify-content-md-center" target="_blank">
+                        Github
+                    </a>
+
+                </div>
+
+                <!-- Sección 3: Contacto (alineado a la derecha en pantallas grandes) -->
+                <div class="col-12 col-md-4 text-start text-md-end mt-3 mt-md-0">
+                    <h5>Contáctanos</h5>
+                    <p>IFTS Nº11, Zavaleta 204, CABA, Argentina</p>
+                    <p>Horario: 18:00 a 22:00</p>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p>
+                    &copy; 2024 - Proyecto Integrador. Todos los derechos
+                    <a class="text-danger" href="#">reservados.</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

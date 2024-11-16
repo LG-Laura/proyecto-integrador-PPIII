@@ -16,31 +16,41 @@
 <body>
     <header>
         <!-- Nav tabs -->
-        <ul class="nav nav-tabs bg-dark mb-3 fixed-top" id="navId" role="navigation">
-            <li class="nav-item" role="presentation">
-                <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a href="#sobre_mi" class="nav-link">Sobre mí</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a href="#contacto" class="nav-link">Contacto</a>
-            </li>
-        </ul>
-
+        <nav>
+            <ul class="nav nav-tabs bg-dark mb-3 fixed-top" id="navId" role="navigation">
+                <li class="nav-item" role="presentation">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a href="#sobre_mi" class="nav-link">Sobre mí</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </li>
+                <div class="ms-auto d-flex flex-column flex-md-row">
+                    <li class="nav-item" role="presentation">
+                        <a href="#login" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a href="#back" class="nav-link">Principal</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
         <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
         <script>
             var triggerEl = document.querySelector("#navId a");
             bootstrap.Tab.getInstance(triggerEl).show(); // Select tab by name
         </script>
-
     </header>
+
+
     <!--    Home    -->
     <section id="home">
         <main>
             <div class="container-fluid section-padding">
                 <div class="card ">
-                    <img src="src/Fondo_home.jpg" class="card-img"
+                    <img src="images/Fondo_home.jpg" class="card-img"
                         style="height: 300px; object-fit: cover; filter: opacity(0.5);" alt="fondo_imagen_home">
                     <div class="card-img-overlay">
                         <h3 class="card-title">Mi primer pagina web</h3>
@@ -78,7 +88,7 @@
                     <!-- Card 1 -->
                     <div class="col-12 col-md-2">
                         <div class="card mt-4 h-100 d-flex flex-column">
-                            <img src="src/java.png" class="card-img-top img-fluid" alt="java_programacion"
+                            <img src="images/java.png" class="card-img-top img-fluid" alt="java_programacion"
                                 style="height: 200px; object-fit: contain;">
                             <div class="card-body">
                                 <h5 class="card-title">Java</h5>
@@ -89,7 +99,7 @@
                     <!-- Card 2 -->
                     <div class="col-12 col-md-2">
                         <div class="card mt-4 h-100 d-flex flex-column">
-                            <img src="src/csharp.png" class="card-img-top img-fluid" alt="csharp_programacion"
+                            <img src="images/csharp.png" class="card-img-top img-fluid" alt="csharp_programacion"
                                 style="height: 200px; object-fit: contain;">
                             <div class="card-body">
                                 <h5 class="card-title">CSharp</h5>
@@ -100,7 +110,7 @@
                     <!-- Card 3 -->
                     <div class="col-12 col-md-2">
                         <div class="card mt-4 h-100 d-flex flex-column">
-                            <img src="src/php.png" class="card-img-top img-fluid" alt="PHP_programacion"
+                            <img src="images/php.png" class="card-img-top img-fluid" alt="PHP_programacion"
                                 style="height: 200px; object-fit: contain;">
                             <div class="card-body">
                                 <h5 class="card-title">PHP</h5>
@@ -111,7 +121,7 @@
                     <!-- Card 4 -->
                     <div class="col-12 col-md-2">
                         <div class="card mt-4 h-100 d-flex flex-column">
-                            <img src="src/html.png" class="card-img-top img-fluid" alt="html_programacion"
+                            <img src="images/html.png" class="card-img-top img-fluid" alt="html_programacion"
                                 style="height: 200px; object-fit: contain;">
                             <div class="card-body">
                                 <h5 class="card-title">HTML y CSS</h5>
@@ -122,7 +132,7 @@
                     <!-- Card 5 -->
                     <div class="col-12 col-md-2">
                         <div class="card mt-4 h-100 d-flex flex-column">
-                            <img src="src/Bootstrap.png" class="card-img-top img-fluid" alt="bootstrap_programacion"
+                            <img src="images/Bootstrap.png" class="card-img-top img-fluid" alt="bootstrap_programacion"
                                 style="height: 200px; object-fit: contain;">
                             <div class="card-body">
                                 <h5 class="card-title">Bootstrap</h5>
@@ -141,7 +151,7 @@
         <div class="container-fluid section-padding">
             <div class="row justify-content-center my-3">
                 <div class="col-8">
-                    <h2 class="text-center text-bg-primary">Contáctanos</h2>
+                    <h2 class="text-center text-bg-primary">Contáctame</h2>
                     <form action="" method="POST">
                         <div class="form-group">
                             <label for="nombre">Nombre</label>
@@ -184,7 +194,7 @@
                 <div class="col-12 col-md-4 text-center text-md-start">
                     <div class="card-body text-secondary">
                         <h5 class="card-title">Javier Duarte</h5>
-                        <p class="card-text">Desarrollador junior</p>
+                        <p class="card-text">Analista de sistemas</p>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 text-center ">
@@ -192,11 +202,11 @@
                         <div class="card-title">Encontrame en las redes</div>
                         <a href="https://www.linkedin.com/in/javier-duarte-acosta/" class="text-secondary"
                             target="_blank">
-                            <img src="src/LinkedIn.png" class="icono" alt="LinkedIn">
+                            <img src="images/LinkedIn.png" class="icono" alt="LinkedIn">
                             LinkedIn
                         </a>
                         <a href="https://github.com/JabyDuarte" class="text-secondary" target="_blank">
-                            <img src="src/github.png" class="icono" alt="Github">
+                            <img src="images/github.png" class="icono" alt="Github">
                             Github
                         </a>
                     </div>

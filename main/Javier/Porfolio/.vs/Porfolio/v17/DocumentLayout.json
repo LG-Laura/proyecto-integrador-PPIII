@@ -1,0 +1,156 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|c:\\users\\jaby\\onedrive\\escritorio\\ppiii-new\\proyecto-integrador-ppiii\\main\\javier\\porfolio\\views\\home\\gracias.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|solutionrelative:views\\home\\gracias.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|c:\\users\\jaby\\onedrive\\escritorio\\ppiii-new\\proyecto-integrador-ppiii\\main\\javier\\porfolio\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|c:\\users\\jaby\\onedrive\\escritorio\\ppiii-new\\proyecto-integrador-ppiii\\main\\javier\\porfolio\\views\\shared\\contacto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|solutionrelative:views\\shared\\contacto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|c:\\users\\jaby\\onedrive\\escritorio\\ppiii-new\\proyecto-integrador-ppiii\\main\\javier\\porfolio\\models\\contactoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|solutionrelative:models\\contactoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|c:\\users\\jaby\\onedrive\\escritorio\\ppiii-new\\proyecto-integrador-ppiii\\main\\javier\\porfolio\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|c:\\users\\jaby\\onedrive\\escritorio\\ppiii-new\\proyecto-integrador-ppiii\\main\\javier\\porfolio\\models\\homeindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|solutionrelative:models\\homeindexviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|c:\\users\\jaby\\onedrive\\escritorio\\ppiii-new\\proyecto-integrador-ppiii\\main\\javier\\porfolio\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|c:\\users\\jaby\\onedrive\\escritorio\\ppiii-new\\proyecto-integrador-ppiii\\main\\javier\\porfolio\\views\\home\\seccionproyectos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{645BD67B-B576-4C0A-A7C5-6B99BBDCFEF7}|Porfolio.csproj|solutionrelative:views\\home\\seccionproyectos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Gracias.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Views\\Home\\Gracias.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Gracias.cshtml",
+              "ToolTip": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Views\\Home\\Gracias.cshtml",
+              "RelativeToolTip": "Views\\Home\\Gracias.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T10:20:54.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ContactoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Models\\ContactoViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\ContactoViewModel.cs",
+              "ToolTip": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Models\\ContactoViewModel.cs",
+              "RelativeToolTip": "Models\\ContactoViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T10:08:07.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T09:53:03.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Contacto.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Views\\Shared\\Contacto.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\Contacto.cshtml",
+              "ToolTip": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Views\\Shared\\Contacto.cshtml",
+              "RelativeToolTip": "Views\\Shared\\Contacto.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-16T09:51:38.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-09T14:47:09.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAcwD0AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-09T14:39:18.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeIndexViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Models\\HomeIndexViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\HomeIndexViewModel.cs",
+              "ToolTip": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Models\\HomeIndexViewModel.cs",
+              "RelativeToolTip": "Models\\HomeIndexViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T09:58:56.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SeccionProyectos.cshtml",
+              "DocumentMoniker": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Views\\Home\\SeccionProyectos.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\SeccionProyectos.cshtml",
+              "ToolTip": "C:\\Users\\Jaby\\OneDrive\\Escritorio\\PPIII-New\\proyecto-integrador-PPIII\\main\\Javier\\Porfolio\\Views\\Home\\SeccionProyectos.cshtml",
+              "RelativeToolTip": "Views\\Home\\SeccionProyectos.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-11-09T14:35:22.36Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
