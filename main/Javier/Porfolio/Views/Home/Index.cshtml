@@ -1,0 +1,35 @@
+﻿@model HomeIndexViewModel //---> abro lugar a que se pueda usar las variables del modelo definido en models
+
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="card">
+    <img id="Fondo_home" src="source/Fondo_home.jpg" class="card-img" style="height: 300px; object-fit: cover;"
+         alt="fondo_imagen_home">
+    <div class="card-img-overlay">
+        <h1 class="card-title text-white">Mi primer pagina web</h1>
+        <div class="card-body">
+            <p class="card-text">
+                Esta es una página web que estoy desarrollando para la materia de prácticas
+                profesionales III de la carrera de Análisis de Sistemas del instituto IFTS N.º 11 en
+                colaboración
+                con el Gobierno de la Ciudad de Buenos Aires y con el fin de aplicar todas las tecnologías
+                vistas en
+                el desarrollo de la tecnicatura.
+            </p>
+        </div>
+    </div>
+</div>
+<div>
+    <partial name="Presentacion" />
+</div>
+<div>
+    <partial name="Habilidades" />
+</div>
+<div>
+    <partial name="SeccionProyectos" model="Model.Proyectos" />
+</div>
+<div class="container-lg" >
+    <partial name="Contacto" />
+</div>
