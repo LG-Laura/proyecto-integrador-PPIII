@@ -14,7 +14,7 @@ document.getElementById('contactForm').addEventListener("submit", function(event
   
     // Realiza la petición POST a mi API
     //fetch('http://localhost:5041/api/Email/SendMailMaca', {
-    fetch('http://apinotificaciones.somee.com/api/Email/SendMailMaca', {
+    fetch('http://www.apiNotificaciones.somee.com/api/Email/SendMailMaca', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json',

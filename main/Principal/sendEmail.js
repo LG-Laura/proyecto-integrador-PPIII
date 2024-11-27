@@ -29,7 +29,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
 
     // Realiza la petición POST a mi API
   // fetch('http://localhost:5041/api/Email/SendMailPrincipal', {
-  Email/SendMailFerfetch('http://apinotificaciones.somee.com/api/Email/SendMailPrincipal', {
+    fetch('http://www.apiNotificaciones.somee.com/api/Email/SendMailPrincipal', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',

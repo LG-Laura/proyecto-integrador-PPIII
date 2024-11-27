@@ -21,7 +21,7 @@ document.getElementById("contact-form").addEventListener("submit", function(even
   };
   
   // Realiza la petición POST a mi API
-  fetch('http://apinotificaciones.somee.com/api/email', {
+  fetch('http://www.apinotificaciones.somee.com/api/email', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json',

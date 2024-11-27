@@ -36,7 +36,7 @@ form.addEventListener("submit", function(event) {
 
     // Realizar la solicitud a la API
     // fetch('http://localhost:5041/api/Email/SendMailFer', {
-        fetch('http://apinotificaciones.somee.com/api/Email/SendMailFer', {
+        fetch('http://www.apiNotificaciones.somee.com/api/Email/SendMailFer', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
