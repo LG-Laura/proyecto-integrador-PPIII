@@ -314,6 +314,10 @@ h3 {
         1px 1px 0 black;   /* Sombra hacia abajo-derecha */
 }
 
+.maca{
+    left: -32%;
+}
+
 .details {
     position: absolute;
     bottom: 30px;

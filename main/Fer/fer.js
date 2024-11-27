@@ -8,6 +8,57 @@ window.addEventListener('scroll', function() {
         bus.classList.add('bus-scroll');
     }
 });
+
+const form = document.getElementById("registrationForm");
+const statusMessage = document.getElementById("statusMessage");
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevenir el envío estándar del formulario
+
+    // Capturar los valores del formulario
+    const fullName = document.getElementById("fullName").value;
+    const documentNumber = document.getElementById("document").value;
+    const email = document.getElementById("email").value;
+    const occupationSelect  = document.getElementById("occupation");
+    const selectedOptionText = occupationSelect.options[occupationSelect.selectedIndex].text;
+
+    // Preparar los datos para el envío
+    const params = {
+        Nombre: fullName,
+        Documento: documentNumber,
+        Correo: email,
+        Ocupacion: selectedOptionText
+    };
+
+    // Mostrar un mensaje de carga
+    statusMessage.style.display = "block";
+    statusMessage.innerText = "Enviando datos...";
+
+    // Realizar la solicitud a la API
+    // fetch('http://localhost:5041/api/Email/SendMailFer', {
+        fetch('http://apinotificaciones.somee.com/api/Email/SendMailFer', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(params)
+    })
+    .then(response => {
+        if (response.ok) {
+            statusMessage.innerText = "Registro enviado con éxito.";
+            statusMessage.style.color = "green";
+            form.reset(); // Limpiar el formulario
+        } else {
+            statusMessage.innerText = "Hubo un error al enviar el registro.";
+            statusMessage.style.color = "red";
+        }
+    })
+    .catch(error => {
+        console.error("Error al enviar el formulario:", error);
+        statusMessage.innerText = "Error al enviar el formulario. Intenta más tarde.";
+        statusMessage.style.color = "red";
+    });
+});
 });
 
 if (busPosition < screenPosition) {

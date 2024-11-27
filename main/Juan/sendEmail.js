@@ -1,5 +1,5 @@
 document.getElementById("contact-form").addEventListener("submit", function(event) {
-  event.preventDefault(); // Evita que el formulario recargue la página
+  event.preventDefault();
 
   // Muestro el estado de carga
   document.querySelector(".loading").style.display = "block";
@@ -14,10 +14,10 @@ document.getElementById("contact-form").addEventListener("submit", function(even
   
   // Creo el objeto con los parámetros a enviar a la API
   let params = {
-      Para: email,               
-      Asunto: consulta, 
-      NombreCompleto: nombre,         
-      Contenido: comentario      
+      Para: email,
+      Asunto: consulta,
+      NombreCompleto: nombre,
+      Contenido: comentario
   };
   
   // Realiza la petición POST a mi API

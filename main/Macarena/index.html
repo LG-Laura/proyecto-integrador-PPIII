@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog de Moda</title>
+	<meta name="description" content="pagina web de blog de cafe">
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"  crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- " Prefetch " carga la pagina siguiente mas rapido pero tiene que ser 1 sola para poder cargarla mas rapida-->
+	<link rel="prefetch" href="nosotros.html" as="document">
+
+	<!-- Preload poner lo mas importante del sitio web  -->
+
+	<link rel="preload" href="css/normalize.css" as="style">
+	<link rel="stylesheet" href="css/normalize.css">
+
+	<link rel="preload" href="css/style.css" as="style"> 
+	<link rel="stylesheet" href="css/style.css"
+
+
+</head>
+<body>
+	<header class="header">
+		<div class="contenedor">
+			<div class="barra">
+				<a class="logo" href="index.html">
+				<h1 class="logo__nombre no-margin centrar-texto">Cursos <span class="logo__bold">De Moda</span></h1>
+				</a>
+
+				<nav class="navegacion">
+					<a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+					<a href="curso.html" class="navegacion__enlace">Cursos</a>
+					<a href="contacto.html" class="navegacion__enlace">Contacto</a>
+					<a href="../Principal/index.html" class="navegacion__enlace">Volver</a>
+				</nav>
+			</div>
+		</div>
+
+		<div class="header__texto">
+			<h2 class="no-margin">Blog de Moda con consejos y cursos</h2>
+			<p class="no-margin">Aprende de los expertos sin moverte de tu casa</p>
+		
+		</div>
+	</header>
+
+	<div class="contenedor contenido-principal">		
+		<main class="blog">			
+			<h3>Nuestro Blog</h3>
+
+			<article class="entrada">
+				<div class="entrada__imagen">
+					<picture>
+						<source loading="lazy" type="image/webp">
+						<img loading="lazy" src="img/tendencia_24_25.jpg" alt="imagen blog">
+					</picture>
+				</div>
+
+				<div class="entrada__contenido">
+					<h3 class="no-margin">Tendencias 24/25</h3>
+					<p>Las 5 tendencias que se llevarán en 2025. La vuelta del traje-pantalón. Todo al color negro. Abrigos largos y atemporales. Los vestidos largos seguirán presentes en nuestro día a día. Los pantalones de tiro alto reinarán en nuestro armario.</p>
+					<a href="https://www.elmueble.com/moda-belleza/tendencias-que-se-llevaran-2025-que-favorecen-a-bajitas_56627" class="boton boton--primario">Leer Entrada</a>
+				</div>
+			</article>
+
+			<article class="entrada">
+				<div class="entrada__imagen">
+					<picture>
+						<source loading="lazy" type="image/webp">
+						<img loading="lazy" src="img/pasarela.jpg" alt="imagen blog"> <!--el atributo loading="lazy" carga las imagenes a medida que va dando scroll -->
+					</picture>
+					
+				</div>
+
+				<div class="entrada__contenido">
+					<h3 class="no-margin">Pasarela</h3>
+					<p>En el icónico escenario del Museo Anahuacalli de Ciudad de México, el director creativo Wes Gordon presentó la colección Carolina Herrera Resort 2025. El desfile Resort 2025 es la culminación de un viaje de décadas de exploración, descubrimiento y conexión entre la Casa Herrera y México. Desde la profunda relación de la fundadora Carolina Herrera con México hasta la continua exploración de Wes Gordon de sus diversas regiones, artesanías y tradiciones, México es una fuente constante de inspiración.</p>
+					<a href="https://elle.clarin.com/moda/pasarela-carolina-herrera-coleccion-desfile_0_6iTwRQEc1Y.html" class="boton boton--primario">Mas Información</a>
+				</div>
+			</article>
+
+		</main>
+		<aside class="sidebar" >
+			<h3>Nuestros Cursos </h3>
+
+			<ul class="cursos no-padding">
+				<li class="widget-curso">
+					<h4 class="no-margin">WorkShop de Tendencias Verano 24/25</h4>
+					<p class="widget-curso__label">Precio: 
+						<span class="widget-curso__info">Gratis</span>
+					</p>
+						<p class="widget-curso__label">Cupo: 
+						<span class="widget-curso__info">20</span>
+					</p>
+					<a href="entrada.html" class="boton boton--secundario">Mas informacion sobre nuestros cursos</a>
+				</li>
+
+					<li class="widget-curso">
+					<h4 class="no-margin">Producción de Moda OnLine</h4>
+					<p class="widget-curso__label">Precio: 
+						<span class="widget-curso__info">Gratis</span>
+					</p>
+						<p class="widget-curso__label">Cupo: 
+						<span class="widget-curso__info">20</span>
+					</p>
+					<a href="entrada.html" class="boton boton--secundario">Mas informacion sobre nuestros cursos</a>
+				</li>
+			</ul>
+
+
+
+		</aside>
+	</div>
+	<footer class="footer">
+		<div class="contenedor">
+				<div class="barra">
+				<a class="logo" href="index.htm">
+				<h1 class="logo__nombre no-margin centrar-texto">Blog <span class="logo__bold">De Moda</span></h1>
+				</a>
+
+				<nav class="navegacion">
+					<a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+					<a href="curso.html" class="navegacion__enlace">Cursos</a>
+					<a href="contacto.html" class="navegacion__enlace">Contacto</a>
+				</nav>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/modernizr.js "></script>
+</body>
+</html>
