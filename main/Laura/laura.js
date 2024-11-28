@@ -23,6 +23,7 @@ document.getElementById('contactForm').addEventListener("submit", function(event
   .then(function(response) {
     if (response.ok) {
         document.getElementById("contactForm").reset();
+        document.getElementById("successModal").classList.add("visible");
     } else {
         alert('ocurrio un error')
     }
@@ -30,6 +31,10 @@ document.getElementById('contactForm').addEventListener("submit", function(event
   .catch(function(error) {
     console.log('FAILED...', error);
   });
+});
+
+document.getElementById("closeModal").addEventListener("click", function() {
+  document.getElementById("successModal").classList.remove("visible");
 });
 
 
