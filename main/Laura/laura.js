@@ -2,6 +2,7 @@
 document.getElementById('contactForm').addEventListener("submit", function(event){
   event.preventDefault();
 
+
   let name = document.getElementById('name').value;
   let email = document.getElementById('email').value;
   let message = document.getElementById('message').value;
@@ -23,6 +24,7 @@ document.getElementById('contactForm').addEventListener("submit", function(event
   .then(function(response) {
     if (response.ok) {
         document.getElementById("contactForm").reset();
+        document.getElementById("successModal").classList.add("visible");
     } else {
         alert('ocurrio un error')
     }
@@ -30,6 +32,10 @@ document.getElementById('contactForm').addEventListener("submit", function(event
   .catch(function(error) {
     console.log('FAILED...', error);
   });
+});
+
+document.getElementById("closeModal").addEventListener("click", function() {
+  document.getElementById("successModal").classList.remove("visible");
 });
 
 
