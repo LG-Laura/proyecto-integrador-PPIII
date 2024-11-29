@@ -405,22 +405,19 @@
 
         <section id="register" class="register-section">
             <div class="register-container">
-                <h2>Registrate, ¡Es rapido!</h2>
-                <form>
+                <h2>Regístrate, ¡Es rápido!</h2>
+                <form id="registrationForm">
                     <div class="form-group">
                         <label for="fullName">Nombre completo:</label>
-                        <input type="text" id="fullName" class="form-control" placeholder="Ingresa tu nombre completo"
-                            required>
+                        <input type="text" id="fullName" class="form-control" placeholder="Ingresa tu nombre completo" required>
                     </div>
                     <div class="form-group">
                         <label for="document">Documento:</label>
-                        <input type="text" id="document" class="form-control" placeholder="Ingresa tu documento"
-                            required>
+                        <input type="text" id="document" class="form-control" placeholder="Ingresa tu documento" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Correo electrónico:</label>
-                        <input type="email" id="email" class="form-control" placeholder="Ingresa tu correo electrónico"
-                            required>
+                        <input type="email" id="email" class="form-control" placeholder="Ingresa tu correo electrónico" required>
                     </div>
                     <div class="form-group">
                         <label for="occupation">Ocupación:</label>
@@ -433,6 +430,9 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
+
+                <div id="statusMessage" style="display: none;"></div>
+
             </div>
         </section>
 

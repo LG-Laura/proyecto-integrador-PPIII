@@ -121,9 +121,9 @@ function moveTaskToNewColumn(taskText, newStatus) {
 
    // Cambiar el color si la tarea se mueve a la columna 'done'
   if (newStatus === 'done') {
-    taskDiv.classList.add('completed'); // Clase que cambia el color a verde
+    taskDiv.classList.add('completed');
   } else {
-    taskDiv.classList.remove('completed'); // Quitar el color verde si no está en 'done'
+    taskDiv.classList.remove('completed');
   }
 
   // Actualizar el estado de la tarea en LocalStorage
