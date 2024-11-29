@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Blog de Moda</title>
+	<link rel="preload" href="css/normalize.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"  crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="header">
+		<div class="contenedor">
+			<div class="barra">
+				<a class="logo" href="index.html">
+				<h1 class="logo__nombre no-margin centrar-texto">Cursos <span class="logo__bold">De Moda</span></h1>
+				</a>
+
+				<nav class="navegacion">
+					<a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+					<a href="curso.html" class="navegacion__enlace">Cursos</a>
+					<a href="contacto.html" class="navegacion__enlace">Contacto</a>
+					<a href="../Principal/index.html" class="navegacion__enlace">Volver</a>
+				</nav>
+			</div>
+		</div>
+
+		<div class="header__texto">
+			<h2 class="no-margin">Blog de Moda con consejos y cursos</h2>
+			<p class="no-margin">Aprende de los expertos sin moverte de tu casa</p>
+		
+		</div>
+	</header>
+	<main class="contenedor">
+		<section>
+		<h3 class="centrar-texto">Contacto</h3>
+		
+		<div class="contacto-bg"></div>	 
+			
+			<form class="formulario" id="contactForm">
+				<div class="campo">
+					<label class="campo__label" for="nombre">Nombre</label>  <!-- el atributo for se usa en el label para cuando se toca en nombre se active el campo de texto-->
+					<input class="campo__field" type="text" placeholder="Tu nombre" id="nombre"><!-- el ID es algo indispensable para que este atributo funcione-->
+				</div>
+
+				<div class="campo">
+					<label class="campo__label" for="email">E-mail</label>  <!-- el atributo for se usa en el label para cuando se toca en nombre se active el campo de texto-->
+					<input class="campo__field" type="text" placeholder="Tu E-mail" id="email"><!-- el ID es algo indispensable para que este atributo funcione-->
+				</div>
+
+				<div class="campo">
+					<label class="campo__label" for="mensaje">Mensaje</label>  
+					<textarea class="campo__field campo__field--textarea" id="mensaje"></textarea>
+				</div>
+
+				<div class="campo">
+					<input type="submit" value="Enviar" class="boton boton--primario">
+				</div>
+			</form>
+		
+		</section>
+	</main>
+	<footer class="footer">
+		<div class="contenedor">
+				<div class="barra">
+				<a class="logo" href="index.htm">
+				<h1 class="logo__nombre no-margin centrar-texto">Blog <span class="logo__bold">De Moda</span></h1>
+				</a>
+
+				<nav class="navegacion">
+					<a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+					<a href="curso.html" class="navegacion__enlace">Cursos</a>
+					<a href="contacto.html" class="navegacion__enlace">Contacto</a>
+				</nav>
+			</div>
+		</div>
+	</footer>
+	<script src="maca.js"></script>
+</body>
+</html>

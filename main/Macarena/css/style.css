@@ -1,0 +1,311 @@
+:root{
+	--fuenteheading: 'PT Sans', sans-serif;
+	--fuenteparrafos: 'Open Sans', sans-serif;
+
+	--colorprimario: #784d3c;
+	--gris: #e1e1e1;
+	--blanco: #ffffff;
+	--negro: #000000;
+}
+.html{
+	box-sizing: border-box;
+	font-size: 62.5%; /* 1rem= 10px */
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+body{
+	font-family: var(--fuenteparrafos); /*fuente de toda la pagina*/
+	font-size: 1.6rem; /*tamaño de letra de toda la pagina*/
+	line-height: 2; /*interlineado entre renglones*/
+}
+
+/** Globales **/
+.contenedor{
+	max-width: 128rem;
+	width: 90%;
+	margin: 0 auto;
+}
+
+*{
+	text-decoration: none;
+}
+
+h1, h2, h3, h4{
+	font-family: var(--fuenteprincipal);
+	line-height: 1.2;
+}
+
+h1{
+	font-size: 4.8rem;
+}
+
+h2{
+	font-size: 4rem;
+	
+}
+
+h3{
+	font-size: 3.2rem;
+}
+
+h4{
+	font-size: 2.8rem;
+}
+
+img{
+	max-width: 100%;
+}
+
+/*Header*/
+
+.no-margin{
+	margin: 0;
+}
+
+.no-padding{
+	padding: 0;
+}
+
+.centrar-texto{
+	text-align: center;
+}
+
+.header {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Capa oscura */
+        url(../img/Asesora_de_moda.avif); /* Imagen de fondo */
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__texto{
+	text-align: center;
+	color: var(--blanco);
+	margin-top: 5rem;
+}
+@media (min-width: 768px) {
+	.header__texto{
+		margin-top: 15rem;
+	}
+    
+}
+
+/*navegacion*/
+.barra{
+	padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+	.barra{
+		display: flex;
+		justify-content: space-between; /*alinear contenido horizontal linea*/
+		align-items: center; /*alinear verticalmente*/
+
+	}
+}
+
+.logo{
+	color: var(--blanco);
+}
+.logo__nombre{
+	font-weight: 400;
+
+}
+.logo__bold{  /* le damos una tipografia mas gruesa al <span> " de cafe " */
+	font-weight: 700;
+}
+
+@media (min-width: 768px) {
+	.navegacion{
+		display: flex;
+		gap: 2rem;
+	}	
+    
+}
+.navegacion__enlace{
+	display: block;
+	text-align: center;
+	font-size: 1.8rem;
+	color: var(--blanco);
+}
+
+/** contenido principal **/
+@media (min-width: 768px) {
+	.contenido-principal{
+		display: grid;
+		grid-template-columns: 2fr 1fr; /* cantidad de columnas*/
+		column-gap: 4rem; /*separacion de las columns*/
+	}
+    
+}
+
+.entrada{
+	border-bottom: 1px solid var(--gris);
+	margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+	border: none;
+	margin-bottom: 0;
+}
+
+/** vista del boton **/
+
+.boton{
+	display: block;
+	font-family: var(--fuenteheading);
+	color: var(--blanco);
+	padding: 1rem 3rem;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	margin-bottom: 2rem;
+	border: none;
+
+}
+
+@media (min-width: 768px) {
+	.boton{
+		display: inline-block;
+	}
+	.boton:hover{
+		cursor: pointer ;
+	}
+    
+}
+.boton--primario{
+	background-color: var(--negro);
+}
+
+.boton--secundario{
+	background-color: var(--colorprimario);
+}
+
+.cursos{
+	list-style: none;
+}
+
+.widget-curso{
+	border-bottom: 1px solid var(--gris);
+	margin-bottom: 2rem;
+}
+
+.widget-curso:last-of-type{  /** seudo selector para eleminar el borde y margen si es que se agrega otro curso sin necesidad de escribir todo el codigo*/
+	border: none;
+	margin: 0;
+}
+
+.widget-curso__label{
+	font-family: var(--fuenteheading);
+	font-weight: 700;
+
+}
+
+.widget-curso__info{
+	font-weight: 400;
+}
+.widget-curso__label,
+.widget-curso__info{
+	font-size: 2rem;
+}
+
+.footer{
+	background-color: var(--negro);
+	padding: 3rem 0;
+	margin-top: 4rem;
+}
+
+/** Sobre Nosotros **/
+
+@media (min-width: 768px) {			 /*al no funcionar gap en todos los dispositivos se usa esta sintaxis solo en flex-box*/
+	.sobre-nosotros{
+		display: flex;
+		justify-content: space-between; 
+	}
+	.sobre-nosotros__imagen,
+	.sobre-nosotros__texto{
+		flex-basis: calc(50% - 1rem);
+	}
+ 	/*
+ 	.sobre-nosotros{             /** esta sintaxis es mas simple y cumple la misma funcion 
+ 		display: grid;
+ 		grid-template-columns: repeat(2, 1fr);
+ 		column-gap: 2rem;
+
+ 	}*/
+}
+
+/** Curso **/
+.curso{
+	padding: 3rem 0;
+	border-bottom: 1px solid var(--gris);
+}
+
+@media (min-width: 768px) {
+	.curso{
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 3rem;
+	}
+    
+}
+.curso:last-of-type{
+	border-bottom: none;
+}
+
+.curso__label{
+	font-family: var(--fuenteheading);
+	font-weight: 700;
+
+}
+
+.curso__info{
+	font-weight: 400;
+}
+.curso__label,
+.curso__info{
+	font-size: 2rem;
+}
+
+/** Contacto **/
+
+.contacto-bg{
+	background-image: url(../img/contacto.avif);
+	height: 40rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+/** Formulario **/
+.formulario{
+	background-color: var(--blanco);
+	margin: -5rem auto 0 auto;
+	width: 95%;
+	padding: 1rem;
+	color: #000000;
+}
+.campo{
+	display: flex;
+	margin-bottom: 2rem;
+	column-gap: 2rem;
+
+}
+.campo__label{
+	flex: 0 0 9rem;
+	text-align: right;
+	padding-right: 2rem;
+}
+
+.campo__field{
+	flex: 1;
+	border: 1px solid var(--gris);
+}
+.campo__field--textarea{
+	height: 20rem;
+}

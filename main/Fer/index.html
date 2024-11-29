@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Nerdearla 2025</title>
+    <link rel="icon" href="images/LogoFavicon.png" type="image/png">
+
+    <!-- CSS de Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery y Popper.js necesarios para los componentes de JavaScript de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css" />
+    
+</head>
+
+<body>
+    <!-- Header: barra de navegación principal -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#"><img src="images/LogoFondoNegro.png" alt="Nerdearla 2025"
+                        style="width: 60px; height: auto;"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">SOBRE NOSOTROS</a></li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-links dropdown-toggle" href="#" id="agendaDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        AGENDA
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="agendaDropdown">
+                        <a class="dropdown-item" href="#clasif1">CHARLAS Y TALLERES</a>
+                        <a class="dropdown-item" href="#clasif2">CONFERENCIAS ESPECIALES</a>
+                        <a class="dropdown-item" href="#agendaCompleta">AGENDA COMPLETA</a>
+                    </div>
+                </li>
+
+                <li><a href="#sponsors">SPONSORS</a></li>
+                <li><a href="#ubicacion">COMO LLEGO</a></li>
+                <li><a href="#contact">NEWSLETTER</a></li>
+                <li><a href="/proyecto-integrador-PPIII/main/Principal/index.html">VOLVER</a></li>
+            </ul>
+            <button class="btn-register" onclick="location.href='#register'">REGISTRARSE</button>
+        </nav>
+    </header>
+
+    <script>
+        $(document).ready(function () {
+            // Ocultar la sección de charlas y talleres al cargar la página
+            $('#clasif1, #clasif2, #agendaCompleta').hide();
+
+            // Mostrar la sección de charlas y talleres al hacer clic en el enlace del dropdown
+            $('.dropdown-menu .dropdown-item').on('click', function (e) {
+                e.preventDefault(); // Prevenir el comportamiento por defecto del enlace
+                // Ocultar todas las secciones
+                $('#clasif1, #clasif2, #agendaCompleta').hide();
+                const targetSection = $(this).attr('href'); // Obtener el id de la sección
+                $(targetSection).show(); // Mostrar/Ocultar la sección{}
+
+
+                // Realizar scroll suave hacia la sección
+                $('html, body').animate({
+                    scrollTop: $(targetSection).offset().top
+                }, 800); // 800 milisegundos para un efecto suave
+            });
+
+            // Mostrar el botón flotante al hacer scroll
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('.btn-float').fadeIn(); // Mostrar el botón
+                } else {
+                    $('.btn-float').fadeOut(); // Ocultar el botón
+                }
+            });
+
+            // Acción del botón flotante al hacer clic
+            $('.btn-float').on('click', function () {
+                $('html, body').animate({ scrollTop: 0 }, 800); // Desplazamiento suave a la parte superior
+            });
+            AOS.init();
+        });
+    </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+
+
+    <!-- Main Content -->
+    <main>
+        <section id="about" class="about-section">
+
+            <div class="drone-animation">
+                <img src="images/dron3.gif" alt="Dron volando" class="drone" />
+            </div>
+
+            <h1>¡Bienvenidos a Nerdearla!</h1>
+            <div class="text-container">
+                <p class="text-light font-weight-light paragraph delay-1">
+                    Donde la tecnología y la pasión por el conocimiento se encuentran. Desde su inicio en 2014,
+                    Nerdearla ha sido el punto de encuentro anual de entusiastas, expertos y curiosos de la tecnología.
+                    Este año, del 22 de noviembre al 25 de diciembre, nos reunimos nuevamente para explorar las
+                    fronteras de la ciberseguridad, la inteligencia artificial, y los lenguajes de programación.<br><br>
+                </p>
+
+                <p class="text-light font-weight-light paragraph delay-2">
+                    A lo largo de más de una década, Nerdearla ha sido mucho más que un evento. Aquí, las ideas
+                    evolucionan línea a línea, en un entorno que celebra cada pequeño commit de innovación. Creemos que
+                    el aprendizaje es un while True, un ciclo infinito de crecimiento donde cada nuevo descubrimiento
+                    nos acerca a algo más grande.<br><br>
+                </p>
+
+                <p class="text-light font-weight-light paragraph delay-3">
+                    Nerdearla 2025 ofrece charlas de expertos, talleres prácticos y la oportunidad de conectar con una
+                    comunidad que comparte la misma pasión. Ven y forma parte de esta experiencia única, donde no solo
+                    observamos el cambio, sino que lo creamos.<br><br>
+                </p>
+            </div>
+            <div id="countdown" data-aos="fade-up">
+                <h2>Cuenta regresiva para Nerdearla 2025</h2>
+                <div id="time">
+                    <span id="days">00</span>Días
+                    <span id="hours">00</span>Horas
+                    <span id="minutes">00</span>Minutos
+                    <span id="seconds">00</span>Segundos
+                </div>
+            </div>
+            <script>
+                // Fecha de Nerdearla 2025
+                const eventDate = new Date("December 25, 2025 00:00:00").getTime();
+
+                const countdownFunction = setInterval(() => {
+                    const now = new Date().getTime();
+                    const timeLeft = eventDate - now;
+
+                    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                    document.getElementById("days").innerText = days;
+                    document.getElementById("hours").innerText = hours;
+                    document.getElementById("minutes").innerText = minutes;
+                    document.getElementById("seconds").innerText = seconds;
+
+                    if (timeLeft < 0) {
+                        clearInterval(countdownFunction);
+                        document.getElementById("countdown").innerHTML = "¡Nerdearla 2025 ya ha comenzado!";
+                    }
+                }, 1000);
+            </script>
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="schedule" class="schedule-section">
+            <h2>Agenda del Evento</h2>
+            <p>Explora las charlas y actividades que tenemos preparadas.</p>
+
+            <section class="agenda-section" id="clasif1">
+                <div class="eventos-agenda">
+                    <h2>Próximos Eventos</h2>
+
+                    <div class="evento">
+                        <div class="fecha">
+                            <h3>25</h3>
+                            <p>NOV</p>
+                        </div>
+                        <div class="detalles">
+                            <h3>Workshop: Introducción a la Inteligencia Artificial</h3>
+                            <p>10:00 AM - 12:00 PM</p>
+                            <p>Universidad Tech, Av. Ciencia 1234, Ciudad Autónoma de Buenos Aires</p>
+                        </div>
+                    </div>
+
+                    <div class="evento">
+                        <div class="fecha">
+                            <h3>02</h3>
+                            <p>DIC</p>
+                        </div>
+                        <div class="detalles">
+                            <h3>Taller: Programación con Python para Principiantes</h3>
+                            <p>14:00 PM - 17:00 PM</p>
+                            <p>Academia de Software, Av. Desarrollo 5678, Ciudad Autónoma de Buenos Aires</p>
+                        </div>
+                    </div>
+
+                    <div class="evento">
+                        <div class="fecha">
+                            <h3>10</h3>
+                            <p>DIC</p>
+                        </div>
+                        <div class="detalles">
+                            <h3>Charla: Análisis de Datos y Machine Learning</h3>
+                            <p>09:00 AM - 11:30 AM</p>
+                            <p>DataScience Hub, Calle Algoritmo 4321, Ciudad Autónoma de Buenos Aires</p>
+                        </div>
+                    </div>
+
+                    <div class="evento">
+                        <div class="fecha">
+                            <h3>18</h3>
+                            <p>DIC</p>
+                        </div>
+                        <div class="detalles">
+                            <h3>Seminario: Inteligencia Artificial en el Mundo Actual</h3>
+                            <p>16:00 PM - 18:00 PM</p>
+                            <p>Instituto de Innovación, Av. Futuro 9000, Ciudad Autónoma de Buenos Aires</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="agendaCompleta" class="agenda-completa-section">
+                <h2>Agenda Completa</h2>
+                <p>A continuación se muestra la agenda de los eventos programados del 22 de noviembre al 23 de
+                    diciembre.</p>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Evento</th>
+                            <th>Hora</th>
+                            <th>Lugar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Evento del 22 de Noviembre -->
+                        <tr>
+                            <td>22 NOV</td>
+                            <td>Conferencia: Innovaciones en IA</td>
+                            <td>10:00 AM - 12:00 PM</td>
+                            <td>Tech Auditorium, CABA</td>
+                        </tr>
+
+                        <!-- Evento del 25 de Noviembre -->
+                        <tr>
+                            <td>25 NOV</td>
+                            <td>Taller: Programación con Python Avanzado</td>
+                            <td>14:00 PM - 17:00 PM</td>
+                            <td>Python Academy, CABA</td>
+                        </tr>
+                        <!-- Evento del 27 de Noviembre -->
+                        <tr>
+                            <td>27 NOV</td>
+                            <td>Charla: Futuro de la Programación</td>
+                            <td>14:00 PM - 16:00 PM</td>
+                            <td>Centro de Tecnología, CABA</td>
+                        </tr>
+
+                        <!-- Evento del 2 de Diciembre -->
+                        <tr>
+                            <td>02 DIC</td>
+                            <td>Charla: Análisis de Datos con Machine Learning</td>
+                            <td>09:00 AM - 11:30 AM</td>
+                            <td>DataScience Hub, CABA</td>
+                        </tr>
+
+                        <!-- Evento del 10 de Diciembre -->
+                        <tr>
+                            <td>10 DIC</td>
+                            <td>Seminario: Tendencias en Inteligencia Artificial</td>
+                            <td>16:00 PM - 18:00 PM</td>
+                            <td>Instituto de Innovación, CABA</td>
+                        </tr>
+                        <!-- Evento del 18 de Diciembre -->
+                        <tr>
+                            <td>18 DIC</td>
+                            <td>Taller: Introducción a la Ciencia de Datos</td>
+                            <td>10:00 AM - 12:00 PM</td>
+                            <td>Academia de Datos, CABA</td>
+                        </tr>
+                        <!-- Evento del 23 de Diciembre -->
+                        <tr>
+                            <td>23 DIC</td>
+                            <td>Conferencia: Futuro de la Inteligencia Artificial</td>
+                            <td>10:00 AM - 12:00 PM</td>
+                            <td>Auditorio Central, CABA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="clasif2" class="conferencias-section">
+                <h2>Conferencias Especiales</h2>
+
+                <div class="card-deck">
+                    <!-- Conferencia del 22 de Noviembre -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Conferencia: Innovaciones en IA</h5>
+                            <p class="card-text">Fecha: 22 NOV</p>
+                            <p class="card-text">Hora: 10:00 AM - 12:00 PM</p>
+                            <p class="card-text">Lugar: Tech Auditorium, CABA</p>
+                        </div>
+                    </div>
+
+                    <!-- Conferencia del 23 de Diciembre -->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Conferencia: Futuro de la Inteligencia Artificial</h5>
+                            <p class="card-text">Fecha: 23 DIC</p>
+                            <p class="card-text">Hora: 10:00 AM - 12:00 PM</p>
+                            <p class="card-text">Lugar: Auditorio Central, CABA</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </section>
+
+
+        <section id="sponsors" class="sponsors-section">
+            <h2>Nuestros Sponsors</h2>
+            <p>Agradecemos a todos nuestros patrocinadores.</p>
+            <p>
+                <br>
+            </p>
+
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="2100">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/imagen1.png" class="d-block w-100" alt="Patrocinador 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/imagen2.png" class="d-block w-100" alt="Patrocinador 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/imagen3.png" class="d-block w-100" alt="Patrocinador 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/imagen4.png" class="d-block w-100" alt="Patrocinador 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/imagen6.png" class="d-block w-100" alt="Patrocinador 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/imagen8.png" class="d-block w-100" alt="Patrocinador 3">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>               
+            </div>
+
+            <img src="images/standsAlPie.jpg" alt="standsAlPie" data-aos="slide-right" data-aos-duration="1500" class="standsAlPie">
+        
+        </section>
+
+        <hr class="section-divider">
+
+        <section id="ubicacion" class="ubicacion">
+            <img src="images/autobus-escolar.png" alt="bus" data-aos="slide-right" data-aos-duration="1500" class="bus">
+            <div class="container-ubicacion">
+                <div id="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.963880634617!2d-58.423507623274574!3d-34.57978047296293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb59cd6452553%3A0x6b521307d135059a!2sLa%20Rural!5e0!3m2!1ses!2sar!4v1730845256257!5m2!1ses!2sar"
+                        width="550" height="400" style="border:none" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+
+                <!-- Medios de transporte -->
+                <div class="transport-info">
+                    <h2>Yendo... </h2>
+                    <p></p>
+                    <ul>
+                        <li><strong>Subte:</strong> Línea D, estación Plaza Italia</li>
+                        <li><strong>Colectivos:</strong> 39, 93, 152, 60</li>
+                        <li><strong>Trenes:</strong> Estación Palermo (Línea San Martín)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <hr class="section-divider">
+
+        <section id="register" class="register-section">
+            <div class="register-container">
+                <h2>Regístrate, ¡Es rápido!</h2>
+                <form id="registrationForm">
+                    <div class="form-group">
+                        <label for="fullName">Nombre completo:</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="Ingresa tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="document">Documento:</label>
+                        <input type="text" id="document" class="form-control" placeholder="Ingresa tu documento" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" class="form-control" placeholder="Ingresa tu correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="occupation">Ocupación:</label>
+                        <select id="occupation" class="form-control" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="sistemas">Trabajo en sistemas</option>
+                            <option value="estudiante">Soy estudiante de sistemas</option>
+                            <option value="aficionado">Soy aficionado</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+
+                <div id="statusMessage" style="display: none;"></div>
+
+            </div>
+        </section>
+
+
+        <section class="subscruption-section" id="contact">
+            <div class="subscruption-container">
+                <h2>Suscribite a nuestro newsletter</h2>
+                <p>¡Enterate de todas las novedades!</p>
+
+                <form action="subscribe.php" method="POST">
+                    <input type="email" name="email" placeholder="Ingresa tu correo electrónico" required>
+                    <button type="submit" class="btn btn-primary">Suscribirse</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <button id="backToTop" class="btn-float" data-aos="flip-left" data-aos-duration="800"
+        data-aos-delay="200">↑</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Nerdearla. Todos los derechos reservados.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/fernan-iriarte-a64aa9236" target="_blank">
+                <img src="images/iconosRS.png" alt="Iconos de redes sociales" style="width: 150px;">
+            </a>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="fer.js"></script>
+
+</body>
+
+</html>

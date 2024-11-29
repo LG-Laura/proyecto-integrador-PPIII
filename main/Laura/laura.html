@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="./laura.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('UnwxxufSfCOzt9nYZ')
+</script>
     <title>Laura López</title>
 </head>
 <body>
@@ -19,12 +26,14 @@
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#projects">Proyectos</a></li>
                 <li><a href="#contact">Contacto</a></li>
+                <li><a href="../Principal/index.html">Volver</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h2 class="hero-title animate__fadeIn">¡Bienvenidos a <br> mi portafolio!</h2>
+        <h2 class="hero-title animate__fadeIn">Innovando con Magia y Tecnología</h2>
+        <p class="hero-text animate__fadeIn">Programadora futurista llevando tus ideas al siguiente nivel.</p>
         
         <div class="social-icons">
             <a href="https://www.linkedin.com/in/lauralopezgarcia/" target="_blank"><img src="./assets/linkedin_icon.ico" alt="LinkedIn"></a>
@@ -34,15 +43,16 @@
 
         <a href="#contact" class="cta-button animate__pulse">Hablemos</a>
 
-        <div class="image-container">
+        <!-- <div class="image-container">
             <img src="./assets/img_principal.png" alt="Imagen representativa">
-        </div>
+        </div> -->
     </section>
 
     <section id="about" class="about-section">
         <h2 class="section-title">Sobre Mí</h2>
         <p class="about-text">Soy una desarrolladora apasionada por combinar magia y tecnología en proyectos impresionantes. Mi misión es crear experiencias innovadoras y visuales que cautiven a los usuarios, tanto en el frontend como en el backend.</p>
     </section>
+
     <section id="skills" class="skills-section">
         <h2 class="section-title">Habilidades</h2>
         <div class="skills-grid">
@@ -55,7 +65,7 @@
                 <p>.NET Core, Node.js, Express</p>
             </div>
             <div class="skill-card animate__bounceIn">
-                <h3>Base de datos</h3>
+                <h3>Base de Datos</h3>
                 <p>MySQL, SQL Server, MongoDB</p>
             </div>
             <div class="skill-card animate__bounceIn">
@@ -64,31 +74,43 @@
             </div>
         </div>
     </section>
+
     <section id="projects" class="projects-section">
         <h2 class="section-title">Proyectos Destacados</h2>
-        <div class="projects-grid">
-            <a href="./assets/img_ecommerce.jpeg" target="_blank" class="project-card">
-                <img src="./assets/img_ecommerce.jpeg" alt="Tienda Ecommerce" class="project-image">
-            </a>
-            <a href="https://cool-boba-7b062c.netlify.app/#" target="_blank" class="project-card">
-                <img src="./assets/img_ecommerce2.png" alt="Página de inicio" class="project-image">
-            </a>
-            <a href="https://example.com/proyecto3" target="_blank" class="project-card">
-                <img src="./assets/proyecto_innovador.jpeg" alt="Proyecto Innovador 3" class="project-image">
-            </a>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <a href="./assets/img_ecommerce.jpeg" target="_blank">
+                    <img src="./assets/img_ecommerce.jpeg" alt="Tienda Ecommerce" class="gallery-image">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://cool-boba-7b062c.netlify.app/#" target="_blank">
+                    <img src="./assets/img_ecommerce2.png" alt="Landing Page" class="gallery-image">
+                </a>
+            </div>
+            <div class="gallery-item">
+                <a href="https://example.com/proyecto3" target="_blank">
+                    <img src="./assets/img_optiVision.png" alt="Proyecto Innovador 3" class="gallery-image">
+                </a>
+            </div>
         </div>
     </section>
+
     <section id="contact" class="contact-section">
         <h2 class="section-title">Contacto</h2>
         <form class="contact-form" id="contactForm">
             <input type="text" id="name" placeholder="Tu nombre" required>
             <input type="email" id="email" placeholder="Tu correo electrónico" required>
             <textarea id="message" placeholder="Tu mensaje" required></textarea>
-            <button type="submit" class="cta-button animate__pulse">Enviar mensaje</button>
+            <button type="submit" class="cta-button animate__pulse">Enviar Mensaje</button>
         </form>
     </section>
+
     <footer class="footer">
         <p>© 2024 Laura López. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="laura.js"></script>
+
 </body>
 </html>

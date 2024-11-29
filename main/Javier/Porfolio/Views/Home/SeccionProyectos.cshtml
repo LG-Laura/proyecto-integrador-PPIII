@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ProyectoViewModel>
+
+@{
+    ViewData["Title"] = "Proyectos";
+} 
+
+@if (Model is not null)
+{
+    <div class="text-center" style="padding-top: 6rem;">
+        <h1>Mis trabajos en procesos</h1>
+        <p>Puedes observar mi proyecto personal que estoy desarrollando de manera autodidacta</p>
+    </div>
+    <div class="container">
+        <div class="row g-3 justify-content-center">
+            @foreach (var proyecto in Model)
+            {
+                <div class="col-12 col-md-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="@proyecto.ImagenURL" class="card-img-top" alt="Logo @proyecto.Titulo.ToString()"
+                                 style="height: 200px; object-fit: contain;" />
+
+                            <div class="card-body">
+                                <h4 class="card-title">@proyecto.Titulo</h4>
+                                <p class="card-text">@proyecto.Descripcion</p>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a class="btn btn-outline-success" href="@proyecto.Link" target="_blank">
+                                Miriñaque
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}

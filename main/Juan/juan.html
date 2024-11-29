@@ -16,19 +16,19 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#home" style="padding-left: 10%;">JZ.</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-center" id="mainNav">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="#home">Inicio</a></li>
                 <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
                 <li class="nav-item"><a class="nav-link" href="#technologies">Tecnologías</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Trabajos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#trabajos">Trabajos</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
             </ul>
-            <a href="#about" class="btn btn-outline-warning ml-3">Empecemos</a>
+            <a href="/proyecto-integrador-PPIII/main/Principal/index.html" class="btn btn-outline-warning ml-3">Volver</a>
         </div>
     </nav>
 
@@ -66,7 +66,7 @@
 
   
   <section id="technologies">
-    <h2>Tecnologías</h2>
+    <h2 style="color: #ffc107;font-weight: bolder; font-size: 3rem;">Tecnologías</h2>
     <div class="tech-carousel">
         <div class="tech-item"><img src="assets/csharp.jfif" alt="C#"><p>C#</p></div>
         <div class="tech-item"><img src="assets/html.png" alt="HTML"><p>HTML</p></div>
@@ -82,18 +82,105 @@
 </section>
   <br>
 
+  <section id="trabajos" class="section">
+    <div class="container">
+        <h2 class="text-center mb-4" style="font-weight: bolder; color: #ffc107;font-size: 3rem;">Trabajos</h2>
+
+       <!-- Tarjeta 1 -->
+<div class="trabajo-card">
+  <div class="imagen">
+      <img src="assets/ntt.jpg" alt="NTT DATA">
+  </div>
+  <div class="contenido">
+      <h3>NTT DATA</h3>
+      <p>Como ingeniero de software en NTT DATA, desarrollé aplicaciones internas utilizando tecnologías avanzadas como C#, .NET, jQuery y SQL Server, contribuyendo a la optimización de procesos y a la mejora del rendimiento organizacional.</p>
+  </div>
+</div>
+
+<!-- Tarjeta 2 -->
+<div class="trabajo-card reverse">
+  <div class="imagen">
+      <img src="assets/ypf.jfif" alt="YPF">
+  </div>
+  <div class="contenido">
+      <h3>YPF</h3>
+      <p>En YPF, desempeñé el rol de desarrollador fullstack, donde implementé soluciones tecnológicas utilizando C#, .NET Framework, jQuery, Bootstrap, Angular, SQL Server y Azure, garantizando el mantenimiento y la evolución de aplicaciones críticas para el sector de comunicación y logística.</p>
+  </div>
+</div>
+
+<!-- Tarjeta 3 -->
+<div class="trabajo-card">
+  <div class="imagen">
+      <img src="assets/ternium.jfif" alt="TERNIUM">
+  </div>
+  <div class="contenido">
+      <h3>TERNIUM</h3>
+      <p>En Ternium, contribuí al desarrollo de aplicaciones internas utilizando C#, .NET Core, JavaScript, SQL Server, Docker, GitLab y Azure. Participé en proyectos bajo metodologías ágiles, asegurando la entrega de soluciones eficientes y de alta calidad.</p>
+  </div>
+</div>
+
+<!-- Tarjeta 4 -->
+<div class="trabajo-card reverse">
+  <div class="imagen">
+      <img src="assets/provincianet.jpg" alt="PROVINCIA NET">
+  </div>
+  <div class="contenido">
+      <h3>PROVINCIA NET</h3>
+      <p>Como desarrollador fullstack en Provincia Net, desarrollé aplicaciones internas para Banco Provincia, empleando tecnologías como C#, .NET Core, JavaScript, SQL Server, Docker, GitLab y Azure, con un enfoque en la agilidad y la colaboración efectiva en equipos multidisciplinarios.</p>
+  </div>
+</div>
+</section>
+<br>
+
+<div id="servicios" class="container mt-5">
+  <h1 class="text-center" style="font-weight: bolder; color: #ffc107;font-size: 3rem;">To-Do List</h1>  
+
+  <!-- Formulario para añadir tareas -->
+  <form id="task-form" class="d-flex mb-3">
+    <input type="text" id="new-task" class="form-control me-2" placeholder="Agregar nueva tarea" required>
+    <button type="submit" class="btn btn-primary">Añadir</button>
+  </form>
+
+  <!-- Contenedor de columnas -->
+  <div class="row">
+    <!-- Columna "En cola" -->
+    <div class="col-md-4">
+      <h4 class="text-center">En cola</h4>
+      <div id="queue" class="task-column d-flex flex-column gap-2" ondragover="event.preventDefault()" ondrop="handleDrop(event, 'queue')"></div>
+    </div>
+
+    <!-- Columna "En proceso" -->
+    <div class="col-md-4">
+      <h4 class="text-center">En proceso</h4>
+      <div id="in-progress" class="task-column d-flex flex-column gap-2" ondragover="event.preventDefault()" ondrop="handleDrop(event, 'in-progress')"></div>
+    </div>
+
+    <!-- Columna "Terminada" -->
+    <div class="col-md-4">
+      <h4 class="text-center">Terminada</h4>
+      <div id="done" class="task-column d-flex flex-column gap-2" ondragover="event.preventDefault()" ondrop="handleDrop(event, 'done')"></div>
+    </div>
+  </div>
+
+  <!-- Botón para exportar a Excel -->
+  <button id="export-btn" class="btn btn-success w-100 mt-4">Exportar a Excel</button>
+</div>
+
+
+
+<br>
+<br>
   <section id="contact" class="contact section">
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
       <h2>Contacto</h2>
       <p>Contactanos</p>
-    </div><!-- End Section Title -->
+    </div>
 
     <div class="container" data-aos="fade-up" data-aos-delay="100">
-
       <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
         <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.9237127168453!2d-58.5001956!3d-34.681874799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc92f78687771%3A0xd7f8e2cee29ad85e!2sBLG%2C%20Rivera%20779%2C%20B1768%20Villa%20Madero%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1727620756866!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div><!-- End Google Maps -->
+      </div>
 
       <div class="row gy-4">
 
@@ -156,7 +243,6 @@
                   </div>
                   <div class="error-message" style="display: none;"></div>
                   <div class="sent-message" style="display: none;">Su mensaje fue enviado exitosamente, a la brevedad nos estaremos comunicando con usted</div>
-              
                   <button type="submit">Enviar Mensaje</button>
               </div>
 
@@ -200,7 +286,16 @@
     <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <script type="text/javascript" src="sendEmail.js"></script>
     <script src="juan.js"></script> 
+    <script>
+      $(document).ready(function () {
+          $('.navbar-nav .nav-link').on('click', function () {
+              $('.navbar-collapse').collapse('hide');
+          });
+      });
+  </script>
 </body>
 </html>

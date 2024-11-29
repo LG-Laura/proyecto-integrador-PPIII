@@ -13,6 +13,7 @@
     <!-- CSS -->
     <link href="style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">    
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script src="https://kit.fontawesome.com/095fc1c837.js" crossorigin="anonymous"></script>
     
 
@@ -39,10 +40,11 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Alumnos</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/proyecto-integrador-PPIII/main/Laura/laura.html" target="_blank">Laura Lopez</a></li>
-                            <li><a class="dropdown-item" href="/proyecto-integrador-PPIII/main/Fer/fer.html" target="_blank">Fer Iriarte</a></li>
-                            <li><a class="dropdown-item" href="/proyecto-integrador-PPIII/main/Javier/javier.html" target="_blank">Javier Duarte</a></li>
-                            <li><a class="dropdown-item" href="/proyecto-integrador-PPIII/main/Juan/juan.html" target="_blank">Juan Zagardia</a></li>
+                            <li><a class="dropdown-item" href="/proyecto-integrador-PPIII/main/Laura/laura.html">Laura Lopez</a></li>
+                            <li><a class="dropdown-item" href="/proyecto-integrador-PPIII/main/Macarena/index.html" >Macarena Tejeda</a></li>
+                            <li><a class="dropdown-item" href="/proyecto-integrador-PPIII/main/Fer/index.html" >Fer Iriarte</a></li>
+                            <li><a class="dropdown-item" href="/proyecto-integrador-PPIII/main/Javier/javier.html" >Javier Duarte</a></li>
+                            <li><a class="dropdown-item" href="/proyecto-integrador-PPIII/main/Juan/juan.html" >Juan Zagardia</a></li>                            
                         </ul>
                     </li>
                 </ul>
@@ -107,10 +109,10 @@
               <h4>Laura</h4>
               <p>C sharp Developer</p>
             </div>
-          </div>
+          </div>          
 
           <div class="slider-img">
-            <img src="/proyecto-integrador-PPIII/main/Principal/assets/fotos/fer.jpeg" alt="3" />
+            <img src="/proyecto-integrador-PPIII/main/Principal/assets/fotos/fer (2).jpeg" alt="3" />
             <h3>Fer</h3>
             <div class="details">
               <h4>Fer</h4>
@@ -126,52 +128,89 @@
               <p>FullStack Developer (un TIPAZO)</p>
             </div>
           </div>
+
+          <div class="slider-img">
+            <img src="/proyecto-integrador-PPIII/main/Principal/assets/fotos/maca.jpeg" alt="2" />
+            <h3 class="maca">Macarena</h3>
+            <div class="details">
+              <h4>Macarena</h4>
+              <p>FrontEnd Developer</p>
+            </div>
+          </div>
+
       </section>
     </div>
 
+    <!-- Cards de cada uno de nosotros -->
+     
+
     <!-- formulario -->
     <div id="contacto" style="padding-top: 20px;"></div>
-    <div class="contact_form">
-		<div class="formulario">			
-            <h1>Formulario de contacto</h1>
-					<form action="submeter-formulario.php" method="post">
-						<p>
-                            <label for="nombre" class="colocar_nombre">Nombre<span class="obligatorio">*</span></label>
-							<input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
-						</p>
-							
-						<p>
-                            <label for="email" class="colocar_email">Email<span class="obligatorio">*</span></label>
-							<input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
-						</p>
+<div class="contact_form">
+    <div class="formulario">            
+        <h1>Formulario de contacto</h1>
+        <form id="contact-form" method="post">
+            <p>
+                <label for="nombre" class="colocar_nombre">Nombre<span class="obligatorio">*</span></label>
+                <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+            </p>
+                
+            <p>
+                <label for="email" class="colocar_email">Email<span class="obligatorio">*</span></label>
+                <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+            </p>
 
-						<p>
-							<label for="telefone" class="colocar_telefono">Teléfono</label>
-							<input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-						</p>		
-							
-						<p>
-							<label for="website" class="colocar_website">Sitio web</label>
-							<input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
-						</p>		
-							
-						<p>
-							<label for="asunto" class="colocar_asunto">Asunto<span class="obligatorio">*</span></label>
-							<input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
-						</p>		
-							
-						<p>
-							<label for="mensaje" class="colocar_mensaje">Mensaje<span class="obligatorio">*</span></label>                     
-                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
-                        </p>	  								
-							<button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+            <p>
+                <label for="telefono" class="colocar_telefono">Teléfono</label>
+                <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+            </p>  
+                
+            <p>
+                <label for="asunto" class="colocar_asunto">Asunto<span class="obligatorio">*</span></label>
+                <input type="text" name="introducir_asunto" id="asunto" required="obligatorio" placeholder="Escribe un asunto">
+            </p>       
+                
+            <p>
+                <label for="mensaje" class="colocar_mensaje">Mensaje<span class="obligatorio">*</span></label>                     
+                <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+            </p>
 
-						<p class="aviso">
-							<span class="obligatorio"> * </span>los campos son obligatorios.
-						</p>
-					</form>
-		</div>	
-	</div>
+            <div class="loading" style="display: none;">
+                <div class="overlay">
+                    <div class="spinner-border" role="status"></div>
+                    <span class="loading-text">Enviando mensaje...</span>
+                </div>
+            </div>
+            <div class="error-message" style="display: none; color: red;"></div>
+            <div class="sent-message" style="display: none; color: green;">
+                Su mensaje fue enviado exitosamente, a la brevedad nos estaremos comunicando con usted.
+            </div>
+
+            <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
+
+            <p class="aviso">
+                <span class="obligatorio"> * </span>los campos son obligatorios.
+            </p>
+        </form>
+    </div>    
+</div>
+
+<!-- Modal de éxito -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title w-100" id="successModalLabel">Mensaje Enviado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="display: none;"></button>
+            </div>
+            <div class="modal-body text-center">
+                Su mensaje fue enviado exitosamente, a la brevedad nos estaremos comunicando con usted.
+            </div>
+        </div>
+    </div>
+</div>
+
+    
 
     <footer>
         <ul>
@@ -184,8 +223,9 @@
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="app"></script>
+    <script src="app.js"></script>
     <script src="jQuery.js"></script>
+    <script type="text/javascript" src="sendEmail.js"></script>
     <script>
         jQuery(document).ready(function ($) {
           $(".slider-img").on("click", function () {

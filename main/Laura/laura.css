@@ -77,6 +77,11 @@ header {
     max-width: 70%;
     z-index: 2;
 }
+.hero-text {
+    font-size: 1.6em;
+    margin-bottom: 1.5em;
+    color: #ffffff;
+}
 
 /* Botón */
 .cta-button {
@@ -220,38 +225,60 @@ header {
 }
 
 .projects-section {
-    padding: 3em 0;
-    background-color: #0d1117;
+    padding: 50px;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
-.projects-grid {
-    display: flex;
-    justify-content: center;
-    gap: 2em;
-    flex-wrap: wrap;
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-.project-card {
-    position: relative;
-    width: 300px;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 15px;
-    background-color: #161b22;
-    box-shadow: 0 0 20px rgba(255, 108, 57, 0.8), 0 0 50px rgba(88, 166, 255, 0.5);
-    transition: transform 0.5s, box-shadow 0.5s;
-    cursor: pointer;
-    display: flex;
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsivo */
+    grid-gap: 20px;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
+    padding: 0 20px;
 }
 
-.project-card:hover {
-    transform: translateY(-15px) scale(1.05);
-    box-shadow: 0 0 40px rgba(255, 108, 57, 1), 0 0 80px rgba(88, 166, 255, 0.7);
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
+
+.gallery-item:hover {
+    transform: scale(1.05); /* Efecto de hover */
+}
+
+.gallery-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    opacity: 0.85; /* Leve cambio al pasar el mouse */
+}
+
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr; /* Para pantallas pequeñas */
+    }
+}
+
+.project-card:hover img {
+    transform: scale(1.1);
+}
+
+
 
 .flaming-text {
     font-size: 2em;
@@ -346,6 +373,3 @@ header {
     50% { transform: scale(1.05); }
     100% { transform: scale(1); }
 }
-
-
-
