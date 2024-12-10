@@ -38,5 +38,13 @@ document.getElementById("closeModal").addEventListener("click", function() {
   document.getElementById("successModal").classList.remove("visible");
 });
 
+// JavaScript para controlar la apertura y cierre del menú
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Agrega o quita la clase "active"
+});
+
 
   

@@ -22,7 +22,7 @@ header {
     z-index: 1000;
 }
 
-.navbar {
+/* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,8 +47,75 @@ header {
     color: #58a6ff;
     text-decoration: none;
     transition: color 0.3s;
+} */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
 }
 
+.logo {
+    font-size: 1.7em;
+    font-family: 'Orbitron', sans-serif;
+    color: #f78166;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    color: #58a6ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #f0a500;
+}
+
+/* Menú hamburguesa */
+.hamburger {
+    display: none; /* Se oculta por defecto */
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Se oculta el menú por defecto en pantallas pequeñas */
+        width: 100%;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Para que el menú no se solape con el header */
+        left: 0;
+        background-color: #333;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex; /* Se muestra el menú cuando se activa */
+    }
+
+    .hamburger {
+        display: block; /* Muestra el menú hamburguesa en pantallas pequeñas */
+    }
+}
 .nav-links a:hover {
     color: #f78166;
 }
